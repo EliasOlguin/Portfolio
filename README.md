@@ -8,3 +8,5 @@ npm run dev
 ```
 
 Checks: `npm run lint`, `npm run typecheck`, `npm test`, `npm run build`.
+
+> The German copy (`src/content/de.ts`) needs a review by a native speaker before launch.
