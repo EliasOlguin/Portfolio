@@ -16,7 +16,7 @@ test('renders the main landmark', () => {
 test('the header holds the language switcher', () => {
   render(<App />)
   const banner = screen.getByRole('banner')
-  expect(within(banner).getByRole('button', { name: 'Deutsch' })).toBeInTheDocument()
+  expect(within(banner).getByRole('button', { name: /Deutsch/ })).toBeInTheDocument()
 })
 
 test('the first focusable element skips to the content', async () => {

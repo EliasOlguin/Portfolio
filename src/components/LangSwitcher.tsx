@@ -13,7 +13,7 @@ export function LangSwitcher() {
           key={code}
           type="button"
           lang={code}
-          aria-label={NAMES[code]}
+          aria-label={`${code.toUpperCase()} ${NAMES[code]}`}
           aria-pressed={code === lang}
           onClick={() => setLang(code)}
         >
