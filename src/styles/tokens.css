@@ -1,0 +1,24 @@
+:root {
+  --bg: #0a0a0a;
+  --surface: #111214;
+  --line: #222326;
+  --line-strong: #34363a;
+  --contour: #2a2c30;
+
+  /* All text colors pass WCAG AA on --bg and --surface. */
+  --text: #c7c9cc;
+  --text-strong: #e3e5e8;
+  --text-muted: #8a8f96;
+  --text-faint: #7d8289;
+
+  --chrome: linear-gradient(180deg, #f4f5f7 0%, #9aa0a8 45%, #e6e8eb 55%, #6c727a 100%);
+  --steel: linear-gradient(180deg, #e9ebee, #a7acb3);
+  --steel-line: linear-gradient(90deg, #3a3d42, #8a8f96, #3a3d42);
+
+  --font: 'Geist Variable', system-ui, sans-serif;
+  --mono: 'Geist Mono Variable', ui-monospace, Consolas, monospace;
+
+  --page: 1040px;
+  --gutter: clamp(16px, 5vw, 48px);
+  --radius: 8px;
+}
