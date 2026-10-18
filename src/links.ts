@@ -34,16 +34,8 @@ export const projectStack = {
   recycleApp: ['Expo / React Native', 'TypeScript', 'Fastify', 'PostgreSQL'],
 }
 
-/** DoneToday gallery files in public/media/donetoday/<lang>/ (see tools/media/donetoday-gallery.mjs). */
-export const doneTodaySlides = [
-  '01-today',
-  '02-complete',
-  '03-create',
-  '04-habits',
-  '05-stats',
-  '06-settings',
-  '07-signup',
-]
+/** DoneToday walkthrough slides in public/media/donetoday/<lang>/ (see tools/media/donetoday-gallery.mjs). */
+export const doneTodaySlides = Array.from({ length: 9 }, (_, i) => `slide-${i + 1}`)
 
 // Flip to true once the clip and its poster exist in public/media/ (see tools/record-demos).
 export const recordedClips = { doneToday: false, recycleApp: false }

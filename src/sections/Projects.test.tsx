@@ -134,16 +134,15 @@ test.each([
 })
 
 test.each(['en', 'es', 'de'] as const)(
-  'in %s the DoneToday gallery opens on the Today screen and has 7 screenshots in that language',
+  'in %s the DoneToday gallery shows the 9 walkthrough slides in that language',
   async (lang) => {
     renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />, lang)
     const dialog = card('DoneToday').querySelector('dialog')!
     await userEvent.click(within(card('DoneToday')).getAllByRole('button')[0])
-    expect(dialog.querySelector('img')).toHaveAttribute(
-      'src',
-      `/media/donetoday/${lang}/01-today.webp`,
-    )
-    expect(within(dialog).getByText('1 / 7')).toBeInTheDocument()
+    const img = dialog.querySelector('img')!
+    expect(img).toHaveAttribute('src', `/media/donetoday/${lang}/slide-1.webp`)
+    expect(img.getAttribute('alt')).toMatch(/^1\. /)
+    expect(within(dialog).getByText('1 / 9')).toBeInTheDocument()
   },
 )
 

@@ -81,7 +81,8 @@ export function Projects({ clips = recordedClips }: { clips?: typeof recordedCli
           shot={`donetoday-${lang}`}
           slides={doneTodaySlides.map((file, i) => ({
             src: `/media/donetoday/${lang}/${file}.webp`,
-            caption: p.doneToday.gallery[i],
+            // The slides carry their own title and text; it doubles as alt text.
+            alt: p.doneToday.gallery[i],
           }))}
           media={clips.doneToday ? 'donetoday' : null}
           copy={p.doneToday}

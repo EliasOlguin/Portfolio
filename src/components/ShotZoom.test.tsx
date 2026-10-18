@@ -2,7 +2,7 @@ import { fireEvent, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import { beforeEach, expect, test } from 'vitest'
 import { renderIn } from '../test/render'
-import { ShotZoom } from './ShotZoom'
+import { ShotZoom, type Slide } from './ShotZoom'
 
 beforeEach(() => {
   // jsdom has <dialog> but no modal behaviour; mimic the open state the browser manages.
@@ -15,13 +15,13 @@ beforeEach(() => {
   }
 })
 
-const slides = [
+const slides: Slide[] = [
   { src: '/media/a/1.webp', caption: 'Today screen' },
   { src: '/media/a/2.webp', caption: 'Statistics' },
   { src: '/media/a/3.webp', caption: 'Settings' },
 ]
 
-const renderZoom = (s = slides) =>
+const renderZoom = (s: Slide[] = slides) =>
   renderIn(<ShotZoom name="DoneToday" src="/media/a.webp" alt="Today screen" slides={s} />)
 
 const openGallery = () =>
@@ -80,6 +80,16 @@ test('only the current screenshot is loaded', async () => {
   renderZoom()
   await openGallery()
   expect(document.querySelectorAll('dialog img')).toHaveLength(1)
+})
+
+test('a slide that explains itself gets no visible caption but keeps its text as alt', async () => {
+  renderZoom([{ src: '/media/s/1.webp', alt: '3. Your routine today. Today brings together…' }])
+  await openGallery()
+  expect(document.querySelector('dialog figcaption')).toBeNull()
+  expect(document.querySelector('dialog img')).toHaveAttribute(
+    'alt',
+    '3. Your routine today. Today brings together…',
+  )
 })
 
 test('a single screenshot shows no navigation', async () => {

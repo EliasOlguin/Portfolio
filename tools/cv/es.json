@@ -1,7 +1,5 @@
 {
-  "1": [
-    "Desarrollador Full Stack  ·  C# / .NET Core  ·  React & TypeScript"
-  ],
+  "1": ["Desarrollador Full Stack  ·  C# / .NET Core  ·  React & TypeScript"],
   "2": [
     "eliasolguin.dev   |   linkedin.com/in/eliasolguin   |   github.com/EliasOlguin\neliasolguinde@gmail.com",
     "   |   ",
@@ -9,9 +7,7 @@
     "   |   ",
     " Ciudadano UE "
   ],
-  "4": [
-    "PERFIL"
-  ],
+  "4": ["PERFIL"],
   "5": [
     "Desarrollador Full Stack con 2 años de experiencia profesional desarrollando y manteniendo aplicaciones críticas para producción con ",
     "C#, .NET Core, React, Redux, TypeScript y SQL Server",
@@ -21,36 +17,16 @@
     "6 plantas",
     " y miles de unidades producidas a diario. Promocionado desde la línea de producción hasta el desarrollo de software. Ciudadano de la UE (sin necesidad de permiso de trabajo), con base en Colonia y disponibilidad inmediata."
   ],
-  "6": [
-    "COMPETENCIAS TÉCNICAS"
-  ],
-  "7": [
-    "Frontend"
-  ],
-  "8": [
-    "React · Redux · TypeScript · JavaScript (ES6+) · Angular · HTML5 · CSS3"
-  ],
-  "9": [
-    "Backend"
-  ],
-  "10": [
-    "C# · .NET · .NET Core · Diseño de APIs REST"
-  ],
-  "11": [
-    "Bases de datos"
-  ],
-  "12": [
-    "SQL Server · MySQL · Diseño de esquemas relacionales"
-  ],
-  "13": [
-    "Herramientas y prácticas"
-  ],
-  "14": [
-    "Git · SourceTree · Jira · Debugging · Testing · Code review · Trabajo en equipo ágil"
-  ],
-  "15": [
-    "EXPERIENCIA"
-  ],
+  "6": ["COMPETENCIAS TÉCNICAS"],
+  "7": ["Frontend"],
+  "8": ["React · Redux · TypeScript · JavaScript (ES6+) · Angular · HTML5 · CSS3"],
+  "9": ["Backend"],
+  "10": ["C# · .NET · .NET Core · Diseño de APIs REST"],
+  "11": ["Bases de datos"],
+  "12": ["SQL Server · MySQL · Diseño de esquemas relacionales"],
+  "13": ["Herramientas y prácticas"],
+  "14": ["Git · SourceTree · Jira · Debugging · Testing · Code review · Trabajo en equipo ágil"],
+  "15": ["EXPERIENCIA"],
   "16": [
     "Reubicación y ciudadanía italiana (UE)",
     " – Alemania e Italia",
@@ -59,15 +35,8 @@
   "17": [
     "Me trasladé de Argentina a Alemania en mayo de 2024. Residí cinco meses en Italia para completar el trámite de ciudadanía italiana y luego regresé a Colonia, donde trabajé en puestos temporales y desarrollé proyectos personales de programación. Actualmente con disponibilidad inmediata."
   ],
-  "18": [
-    "Newsan S.A.",
-    " – Ushuaia, Argentina",
-    "\tAgo. 2020 – Ene. 2024"
-  ],
-  "19": [
-    "Desarrollador de Software",
-    "\tAbr. 2022 – Ene. 2024"
-  ],
+  "18": ["Newsan S.A.", " – Ushuaia, Argentina", "\tAgo. 2020 – Ene. 2024"],
+  "19": ["Desarrollador de Software", "\tAbr. 2022 – Ene. 2024"],
   "20": [
     "Desarrollo y mantenimiento de aplicaciones full stack abarcando ",
     "frontend, backend, APIs REST y bases de datos relacionales",
@@ -88,12 +57,8 @@
     "Git / SourceTree",
     ", sometiendo todo el trabajo a revisión y aprobación del líder técnico."
   ],
-  "24": [
-    "Sistema de Trazabilidad de Producción"
-  ],
-  "25": [
-    "React · Redux · TypeScript · C# · .NET Core · SQL Server"
-  ],
+  "24": ["Sistema de Trazabilidad de Producción"],
+  "25": ["React · Redux · TypeScript · C# · .NET Core · SQL Server"],
   "26": [
     "Responsable del diseño y desarrollo de ",
     "SPP",
@@ -117,12 +82,8 @@
     "in situ en Buenos Aires",
     ", implantándolo desde cero junto a los equipos de ingeniería locales."
   ],
-  "31": [
-    "Sistema de Control de Equipos de Seguridad ESD"
-  ],
-  "32": [
-    "React · C# / .NET · SQL Server · Integración con Raspberry Pi"
-  ],
+  "31": ["Sistema de Control de Equipos de Seguridad ESD"],
+  "32": ["React · C# / .NET · SQL Server · Integración con Raspberry Pi"],
   "33": [
     "Desarrollo de una ",
     "aplicación end-to-end",
@@ -157,43 +118,22 @@
   "40": [
     "Colaboración con ingeniería para diagnosticar problemas de producción e implementar soluciones; supervisión y mentoría de un técnico junior, coordinando las tareas técnicas diarias para asegurar la continuidad de la producción."
   ],
-  "41": [
-    "Soldador de Brazing",
-    " – Newsan S.A.",
-    "\tAgo. 2020 – Abr. 2021"
-  ],
+  "41": ["Soldador de Brazing", " – Newsan S.A.", "\tAgo. 2020 – Abr. 2021"],
   "42": [
     "Soldadura y ensamblaje de componentes según objetivos diarios de producción. ",
     "Dos promociones por mérito",
     ": de operario de producción a técnico y, después, a desarrollador de software."
   ],
-  "43": [
-    "FORMACIÓN"
-  ],
-  "44": [
-    "Diplomatura en Desarrollo Frontend: Angular & JavaScript",
-    "\tAgo. – Dic. 2022"
-  ],
-  "45": [
-    "Universidad Nacional de Tierra del Fuego, en colaboración con Panalsoft"
-  ],
-  "46": [
-    "Programa de Desarrollo Full Stack",
-    "\t2022"
-  ],
+  "43": ["FORMACIÓN"],
+  "44": ["Diplomatura en Desarrollo Frontend: Angular & JavaScript", "\tAgo. – Dic. 2022"],
+  "45": ["Universidad Nacional de Tierra del Fuego, en colaboración con Panalsoft"],
+  "46": ["Programa de Desarrollo Full Stack", "\t2022"],
   "47": [
     "UTN Buenos Aires junto a DirMOD y el Gobierno de Tierra del Fuego · PHP, Laravel, JavaScript, Angular, MySQL"
   ],
-  "48": [
-    "Diplomatura en Desarrollo Backend: C# & .NET",
-    "\tAgo. – Dic. 2021"
-  ],
-  "49": [
-    "Universidad Nacional de Tierra del Fuego, en colaboración con Panalsoft"
-  ],
-  "50": [
-    "IDIOMAS"
-  ],
+  "48": ["Diplomatura en Desarrollo Backend: C# & .NET", "\tAgo. – Dic. 2021"],
+  "49": ["Universidad Nacional de Tierra del Fuego, en colaboración con Panalsoft"],
+  "50": ["IDIOMAS"],
   "51": [
     "Español",
     ": Nativo",

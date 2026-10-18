@@ -2,7 +2,8 @@ import { useRef, useState } from 'react'
 import { useLang } from '../LangProvider'
 import './ShotZoom.css'
 
-export type Slide = { src: string; caption: string }
+/** `caption` is shown under the image; slides that carry their own text only need `alt`. */
+export type Slide = { src: string; caption?: string; alt?: string }
 
 type Props = { name: string; src: string; alt: string; slides: Slide[] }
 
@@ -71,8 +72,8 @@ export function ShotZoom({ name, src, alt, slides }: Props) {
         </div>
         <figure className="zoom__figure">
           {/* Only the current screenshot is in the DOM, so the others load on demand. */}
-          <img key={slide.src} src={slide.src} alt={slide.caption} />
-          <figcaption>{slide.caption}</figcaption>
+          <img key={slide.src} src={slide.src} alt={slide.alt ?? slide.caption ?? ''} />
+          {slide.caption && <figcaption>{slide.caption}</figcaption>}
         </figure>
       </dialog>
     </div>
