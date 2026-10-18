@@ -4,6 +4,10 @@ import { Hero } from './sections/Hero'
 import { Experience } from './sections/Experience'
 import { Metrics } from './sections/Metrics'
 import { Projects } from './sections/Projects'
+import { Path } from './sections/Path'
+import { Education } from './sections/Education'
+import { Contact } from './sections/Contact'
+import { Footer } from './components/Footer'
 import './sections/sections.css'
 
 export default function App() {
@@ -15,7 +19,11 @@ export default function App() {
         <Metrics />
         <Experience />
         <Projects />
+        <Path />
+        <Education />
+        <Contact />
       </main>
+      <Footer />
     </LangProvider>
   )
 }

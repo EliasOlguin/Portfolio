@@ -20,7 +20,14 @@ export const stack = {
   data: 'SQL Server · PostgreSQL · MySQL',
 }
 
-export const experienceStack = ['React', 'Redux', 'TypeScript', 'C# / .NET Core', 'SQL Server', 'Raspberry Pi']
+export const experienceStack = [
+  'React',
+  'Redux',
+  'TypeScript',
+  'C# / .NET Core',
+  'SQL Server',
+  'Raspberry Pi',
+]
 
 export const projectStack = {
   doneToday: ['React 19', 'TypeScript', 'ASP.NET Core', 'PostgreSQL'],

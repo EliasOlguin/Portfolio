@@ -1,0 +1,79 @@
+.path {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin: 0 0 36px;
+  padding: 0;
+  list-style: none;
+}
+
+/* The steel line runs through the station dots. */
+.path::before {
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  right: 7px;
+  height: 1px;
+  background: var(--steel-line);
+}
+
+.path__station {
+  position: relative;
+}
+
+.path__dot {
+  display: block;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 16px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 1px solid var(--text-muted);
+}
+
+.path__station:last-child .path__dot {
+  background: var(--steel);
+  border-color: transparent;
+}
+
+.path__station h3 {
+  font-family: var(--font);
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.path__station p {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.path__story {
+  max-width: 60ch;
+  font-size: clamp(17px, 2vw, 19px);
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .path {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-left: 32px;
+  }
+  .path::before {
+    top: 7px;
+    bottom: 7px;
+    left: 7px;
+    right: auto;
+    width: 1px;
+    height: auto;
+    background: linear-gradient(180deg, #3a3d42, #8a8f96, #3a3d42);
+  }
+  .path__dot {
+    position: absolute;
+    left: -32px;
+    top: 3px;
+    margin: 0;
+  }
+}

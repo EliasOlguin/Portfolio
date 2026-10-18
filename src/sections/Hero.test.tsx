@@ -28,12 +28,18 @@ test('offers the CV as a download', () => {
 
 test('links to GitHub, LinkedIn and email', () => {
   renderHero()
-  expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute('href', 'https://github.com/EliasOlguin')
+  expect(screen.getByRole('link', { name: 'GitHub' })).toHaveAttribute(
+    'href',
+    'https://github.com/EliasOlguin',
+  )
   expect(screen.getByRole('link', { name: 'LinkedIn' })).toHaveAttribute(
     'href',
     'https://www.linkedin.com/in/eliasolguin/',
   )
-  expect(screen.getByRole('link', { name: 'Email' })).toHaveAttribute('href', 'mailto:eliasolguinde@gmail.com')
+  expect(screen.getByRole('link', { name: 'Email' })).toHaveAttribute(
+    'href',
+    'mailto:eliasolguinde@gmail.com',
+  )
 })
 
 test('lists the stack rows in the current language', () => {

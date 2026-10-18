@@ -33,7 +33,10 @@ test('recycle-app links to the code and the demo video', () => {
     'href',
     'https://github.com/EliasOlguin/recycle-app',
   )
-  expect(c.getByRole('link', { name: 'Demo video' })).toHaveAttribute('href', '/media/recycle-app.mp4')
+  expect(c.getByRole('link', { name: 'Demo video' })).toHaveAttribute(
+    'href',
+    '/media/recycle-app.mp4',
+  )
 })
 
 test('every card lists its stack', () => {

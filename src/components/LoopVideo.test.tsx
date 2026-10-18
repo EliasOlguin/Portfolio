@@ -18,7 +18,10 @@ function setReducedMotion(reduce: boolean) {
 
 function intersect(isIntersecting: boolean) {
   act(() => {
-    observerCallback?.([{ isIntersecting } as IntersectionObserverEntry], {} as IntersectionObserver)
+    observerCallback?.(
+      [{ isIntersecting } as IntersectionObserverEntry],
+      {} as IntersectionObserver,
+    )
   })
 }
 

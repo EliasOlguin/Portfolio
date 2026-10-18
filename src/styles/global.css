@@ -161,6 +161,7 @@ a {
 }
 
 .section {
+  scroll-margin-top: 56px;
   padding: clamp(56px, 9vw, 96px) 0;
   border-top: 1px solid var(--line);
 }

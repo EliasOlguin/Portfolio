@@ -13,7 +13,9 @@ test('metrics show the four headline numbers', () => {
 test('experience shows the Newsan role and both systems', () => {
   renderIn(<Experience />)
   expect(screen.getByRole('heading', { name: 'Software Developer · Newsan' })).toBeInTheDocument()
-  expect(screen.getByRole('heading', { name: 'Production Traceability System (SPP)' })).toBeInTheDocument()
+  expect(
+    screen.getByRole('heading', { name: 'Production Traceability System (SPP)' }),
+  ).toBeInTheDocument()
   expect(screen.getByRole('heading', { name: 'ESD Safety Control' })).toBeInTheDocument()
 })
 

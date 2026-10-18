@@ -140,3 +140,87 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Education + languages */
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.rows li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+}
+
+.rows li .mono {
+  font-size: 13px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+}
+
+.contact__title {
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 14px;
+}
+
+.contact__text {
+  color: var(--text-muted);
+  margin-bottom: 28px;
+}
+
+.contact__cta {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Footer */
+.footer {
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+.footer__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.footer__mate {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer__mate svg {
+  display: block;
+}
