@@ -2,9 +2,14 @@
 import { readFileSync } from 'node:fs'
 import { chromium } from 'playwright'
 
-const contours = readFileSync(new URL('../../src/assets/ushuaia-contours.svg', import.meta.url), 'utf8')
+const contours = readFileSync(
+  new URL('../../src/assets/ushuaia-contours.svg', import.meta.url),
+  'utf8',
+)
 const font = (pkg, file) =>
-  readFileSync(new URL(`../../node_modules/@fontsource-variable/${pkg}/files/${file}`, import.meta.url)).toString('base64')
+  readFileSync(
+    new URL(`../../node_modules/@fontsource-variable/${pkg}/files/${file}`, import.meta.url),
+  ).toString('base64')
 
 const html = `<!doctype html><html><head><style>
 @font-face { font-family: Geist; src: url(data:font/woff2;base64,${font('geist', 'geist-latin-wght-normal.woff2')}) format('woff2'); font-weight: 100 900; }
@@ -28,6 +33,8 @@ const browser = await chromium.launch()
 const page = await browser.newPage({ viewport: { width: 1200, height: 630 } })
 await page.setContent(html)
 await page.evaluate(() => document.fonts.ready)
-await page.screenshot({ path: new URL('../../public/og.png', import.meta.url).pathname.replace(/^\/(\w:)/, '$1') })
+await page.screenshot({
+  path: new URL('../../public/og.png', import.meta.url).pathname.replace(/^\/(\w:)/, '$1'),
+})
 await browser.close()
 console.log('wrote public/og.png')

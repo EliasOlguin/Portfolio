@@ -24,7 +24,9 @@ const tileY = (lat) => {
 async function tile(x, y) {
   const file = join(cache, `${Z}-${x}-${y}.png`)
   if (!existsSync(file)) {
-    const res = await fetch(`https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${Z}/${x}/${y}.png`)
+    const res = await fetch(
+      `https://s3.amazonaws.com/elevation-tiles-prod/terrarium/${Z}/${x}/${y}.png`,
+    )
     if (!res.ok) throw new Error(`tile ${x}/${y}: HTTP ${res.status}`)
     writeFileSync(file, Buffer.from(await res.arrayBuffer()))
   }
@@ -32,13 +34,20 @@ async function tile(x, y) {
 }
 
 mkdirSync(cache, { recursive: true })
-const fx0 = tileX(BBOX.west), fx1 = tileX(BBOX.east)
-const fy0 = tileY(BBOX.north), fy1 = tileY(BBOX.south)
-const tx0 = Math.floor(fx0), tx1 = Math.floor(fx1), ty0 = Math.floor(fy0), ty1 = Math.floor(fy1)
+const fx0 = tileX(BBOX.west),
+  fx1 = tileX(BBOX.east)
+const fy0 = tileY(BBOX.north),
+  fy1 = tileY(BBOX.south)
+const tx0 = Math.floor(fx0),
+  tx1 = Math.floor(fx1),
+  ty0 = Math.floor(fy0),
+  ty1 = Math.floor(fy1)
 
 // Pixel window of the bbox inside the stitched tiles.
-const px0 = Math.round((fx0 - tx0) * 256), py0 = Math.round((fy0 - ty0) * 256)
-const w = Math.round((fx1 - fx0) * 256), h = Math.round((fy1 - fy0) * 256)
+const px0 = Math.round((fx0 - tx0) * 256),
+  py0 = Math.round((fy0 - ty0) * 256)
+const w = Math.round((fx1 - fx0) * 256),
+  h = Math.round((fy1 - fy0) * 256)
 const heights = new Float64Array(w * h)
 
 for (let ty = ty0; ty <= ty1; ty++)
@@ -46,7 +55,8 @@ for (let ty = ty0; ty <= ty1; ty++)
     const png = await tile(tx, ty)
     for (let y = 0; y < 256; y++)
       for (let x = 0; x < 256; x++) {
-        const gx = (tx - tx0) * 256 + x - px0, gy = (ty - ty0) * 256 + y - py0
+        const gx = (tx - tx0) * 256 + x - px0,
+          gy = (ty - ty0) * 256 + y - py0
         if (gx < 0 || gy < 0 || gx >= w || gy >= h) continue
         const i = (y * 256 + x) * 4
         const d = png.data
@@ -61,9 +71,11 @@ for (let t = STEP; t <= 1400; t += STEP) thresholds.push(t)
 const TOL = Number(process.env.TOL ?? 2)
 function simplify(pts) {
   if (pts.length < 3) return pts
-  const [ax, ay] = pts[0], [bx, by] = pts[pts.length - 1]
+  const [ax, ay] = pts[0],
+    [bx, by] = pts[pts.length - 1]
   const len = Math.hypot(bx - ax, by - ay) || 1
-  let max = 0, idx = 0
+  let max = 0,
+    idx = 0
   for (let i = 1; i < pts.length - 1; i++) {
     const d = Math.abs((bx - ax) * (ay - pts[i][1]) - (ax - pts[i][0]) * (by - ay)) / len
     if (d > max) {
@@ -103,14 +115,23 @@ function openAtEdges(ring) {
 const smooth = (pts) =>
   pts.length < 3
     ? pts
-    : [pts[0], ...pts.slice(0, -1).flatMap(([x0, y0], i) => {
-        const [x1, y1] = pts[i + 1]
-        return [[0.75 * x0 + 0.25 * x1, 0.75 * y0 + 0.25 * y1], [0.25 * x0 + 0.75 * x1, 0.25 * y0 + 0.75 * y1]]
-      }), pts[pts.length - 1]]
+    : [
+        pts[0],
+        ...pts.slice(0, -1).flatMap(([x0, y0], i) => {
+          const [x1, y1] = pts[i + 1]
+          return [
+            [0.75 * x0 + 0.25 * x1, 0.75 * y0 + 0.25 * y1],
+            [0.25 * x0 + 0.75 * x1, 0.25 * y0 + 0.75 * y1],
+          ]
+        }),
+        pts[pts.length - 1],
+      ]
 
 const k = WIDTH / w
 const fmt = (n) => (Math.round(n * k * 10) / 10).toString()
-const paths = contours().size([w, h]).thresholds(thresholds)(Array.from(heights))
+const paths = contours()
+  .size([w, h])
+  .thresholds(thresholds)(Array.from(heights))
   .map((c) =>
     c.coordinates
       .flat()
