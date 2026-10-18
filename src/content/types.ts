@@ -35,11 +35,19 @@ export type Content = {
     howItWorks: string
     zoom: string
     close: string
+    screenshots: string
+    prev: string
+    next: string
     liveNote: string
-    doneToday: Project
+    doneToday: Project & { gallery: string[] }
     recycleApp: Project
   }
-  path: { title: string; stations: { title: string; note: string }[]; since: string; story: string }
+  path: {
+    title: string
+    stations: { title: string; place: string; dates: string }[]
+    since: string
+    story: string
+  }
   education: { title: string; items: { name: string; year: string }[] }
   languages: { title: string; items: { name: string; level: string }[] }
   contact: { headline: string; text: string; email: string }

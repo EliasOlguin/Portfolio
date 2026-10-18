@@ -1,16 +1,15 @@
 import { Chips } from '../components/Chips'
 import { LoopVideo } from '../components/LoopVideo'
 import { Section } from '../components/Section'
-import { ShotZoom } from '../components/ShotZoom'
+import { ShotZoom, type Slide } from '../components/ShotZoom'
 import { useLang } from '../LangProvider'
-import { links, projectStack, recordedClips } from '../links'
+import { doneTodaySlides, links, projectStack, recordedClips } from '../links'
 
 type CardProps = {
   name: string
   media: string | null
   shot: string
-  /** Uncropped image for the zoom dialog; defaults to `<shot>-full`. */
-  fullShot?: string
+  slides: Slide[]
   copy: { description: string; meta: string; steps: string[]; highlights: string[]; shot: string }
   howItWorks: string
   note?: string
@@ -22,7 +21,7 @@ function ProjectCard({
   name,
   media,
   shot,
-  fullShot = `${shot}-full`,
+  slides,
   copy,
   stack,
   actions,
@@ -34,12 +33,7 @@ function ProjectCard({
       {media ? (
         <LoopVideo src={`/media/${media}.mp4`} poster={`/media/${media}.jpg`} label={name} />
       ) : (
-        <ShotZoom
-          name={name}
-          src={`/media/${shot}.webp`}
-          fullSrc={`/media/${fullShot}.webp`}
-          alt={copy.shot}
-        />
+        <ShotZoom name={name} src={`/media/${shot}.webp`} alt={copy.shot} slides={slides} />
       )}
       <div className="project__body">
         <h3>{name}</h3>
@@ -84,8 +78,11 @@ export function Projects({ clips = recordedClips }: { clips?: typeof recordedCli
       <div className="projects">
         <ProjectCard
           name="DoneToday"
-          // Spanish UI capture for ES; the English one also serves DE until a German capture exists.
-          shot={lang === 'es' ? 'donetoday-es' : 'donetoday-en'}
+          shot={`donetoday-${lang}`}
+          slides={doneTodaySlides.map((file, i) => ({
+            src: `/media/donetoday/${lang}/${file}.webp`,
+            caption: p.doneToday.gallery[i],
+          }))}
           media={clips.doneToday ? 'donetoday' : null}
           copy={p.doneToday}
           howItWorks={p.howItWorks}
@@ -99,8 +96,8 @@ export function Projects({ clips = recordedClips }: { clips?: typeof recordedCli
         <ProjectCard
           name="recycle-app"
           shot="recycle-app"
-          // Already shows both screens uncropped.
-          fullShot="recycle-app"
+          // Only one capture exists so far: both screens side by side, uncropped.
+          slides={[{ src: '/media/recycle-app.webp', caption: p.recycleApp.shot }]}
           media={clips.recycleApp ? 'recycle-app' : null}
           copy={p.recycleApp}
           howItWorks={p.howItWorks}

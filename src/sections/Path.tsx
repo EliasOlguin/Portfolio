@@ -11,7 +11,8 @@ export function Path() {
           <li key={s.title} className="path__station">
             <span className="path__dot" aria-hidden="true" />
             <h3>{s.title}</h3>
-            <p>{s.note}</p>
+            <p className="path__place">{s.place}</p>
+            <p className="path__dates">{s.dates}</p>
           </li>
         ))}
       </ol>

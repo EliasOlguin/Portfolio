@@ -73,6 +73,9 @@ export const en: Content = {
     howItWorks: 'How it works',
     zoom: 'Enlarge screenshot',
     close: 'Close',
+    screenshots: 'Screenshots',
+    prev: 'Previous',
+    next: 'Next',
     liveNote: 'Free hosting: the first load can take up to a minute.',
     doneToday: {
       description:
@@ -87,6 +90,15 @@ export const en: Content = {
         'Per-user time zones: schedules and streaks follow each user’s own day.',
         'Account security: 2FA, CSRF protection and email confirmation.',
         'Tested streak and scheduling logic (xUnit) and versioned releases.',
+      ],
+      gallery: [
+        'Today: the day’s habits with their streaks, plus this week’s progress.',
+        'Checking off a habit, with an Undo notice.',
+        'Creating a habit: scheduled days, an optional daily target, icon and colour.',
+        'All habits, with manual reordering.',
+        'Statistics: the week, a breakdown by habit and a monthly calendar.',
+        'Settings: time zone, language, theme and two-factor authentication.',
+        'Sign-up with the password rules listed.',
       ],
       shot: 'DoneToday Today screen: three habits to check off with their current and best streak, plus this week’s completion rate and daily chart',
     },
@@ -110,10 +122,10 @@ export const en: Content = {
   path: {
     title: 'Path',
     stations: [
-      { title: 'Brazing welder', note: '2020 · Ushuaia' },
-      { title: 'Repair technician', note: '2021 · led a junior' },
-      { title: 'Software developer', note: '2022 · Newsan' },
-      { title: 'Cologne', note: '2024 – now · EU citizen' },
+      { title: 'Brazing welder', place: 'Newsan · Ushuaia', dates: '2020 – 2021' },
+      { title: 'Repair technician', place: 'Newsan · Ushuaia', dates: '2021 – 2022' },
+      { title: 'Software developer', place: 'Newsan · Ushuaia', dates: '2022 – 2024' },
+      { title: 'Move to Germany', place: 'Italy · Cologne', dates: '2024 – now' },
     ],
     since: 'Since 2024',
     story:

@@ -24,8 +24,8 @@
 .zoom__dialog {
   width: fit-content;
   max-width: 94vw;
-  max-height: 92vh;
-  padding: 44px 12px 12px;
+  max-height: 94vh;
+  padding: 0 12px 12px;
   background: var(--surface);
   border: 1px solid var(--line-strong);
   border-radius: var(--radius);
@@ -33,31 +33,66 @@
 }
 
 .zoom__dialog::backdrop {
-  background: rgb(0 0 0 / 0.8);
+  background: rgb(0 0 0 / 0.85);
 }
 
-/* The full screenshot keeps its own proportions; nothing is cropped. */
-.zoom__dialog img {
-  display: block;
-  width: auto;
-  max-width: 100%;
-  /* Whole screenshot in view: fit the height left after the Close bar. */
-  max-height: calc(92vh - 60px);
-  height: auto;
-  margin: 0 auto;
-  border-radius: 4px;
-}
-
-.zoom__close {
-  position: absolute;
-  top: 8px;
-  right: 12px;
-  min-height: 30px;
-  padding: 0 12px;
+.zoom__bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 10px 0;
   font-size: 12px;
+  color: var(--text-muted);
+  background: var(--surface);
+}
+
+.zoom__bar span {
+  min-width: 48px;
+  text-align: center;
+}
+
+.zoom__bar button {
+  min-height: 32px;
+  padding: 0 12px;
+  font: inherit;
   color: var(--text-strong);
   background: none;
   border: 1px solid var(--line-strong);
   border-radius: 6px;
   cursor: pointer;
+}
+
+.zoom__bar button:hover {
+  border-color: var(--text-muted);
+}
+
+.zoom__close {
+  margin-left: auto;
+}
+
+.zoom__figure {
+  margin: 0;
+}
+
+/* The full screenshot keeps its own proportions; nothing is cropped. */
+.zoom__figure img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  /* Whole screenshot in view: fit the height left after the bar and caption. */
+  max-height: calc(94vh - 110px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.zoom__figure figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--text);
+  text-align: center;
 }

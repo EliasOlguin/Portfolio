@@ -80,6 +80,9 @@ export const es: Content = {
     howItWorks: 'Cómo funciona',
     zoom: 'Ampliar captura',
     close: 'Cerrar',
+    screenshots: 'Capturas',
+    prev: 'Anterior',
+    next: 'Siguiente',
     liveNote: 'Hosting gratuito: la primera carga puede tardar hasta un minuto.',
     doneToday: {
       description:
@@ -94,6 +97,15 @@ export const es: Content = {
         'Zona horaria por usuario: los horarios y las rachas siguen el día de cada persona.',
         'Seguridad de cuenta: 2FA, protección CSRF y confirmación de email.',
         'Lógica de rachas y planificación testeada (xUnit) y versiones publicadas.',
+      ],
+      gallery: [
+        'Hoy: los hábitos del día con sus rachas y el progreso de la semana.',
+        'Marcar un hábito como hecho, con aviso para deshacer.',
+        'Crear un hábito: días programados, meta diaria opcional, ícono y color.',
+        'Todos los hábitos, con orden manual.',
+        'Estadísticas: la semana, el detalle por hábito y un calendario mensual.',
+        'Configuración: zona horaria, idioma, tema y autenticación en dos pasos.',
+        'Registro con las reglas de contraseña a la vista.',
       ],
       shot: 'Pantalla Hoy de DoneToday: tres hábitos para marcar con su racha actual y la mejor, más el cumplimiento de la semana y el gráfico diario',
     },
@@ -117,10 +129,10 @@ export const es: Content = {
   path: {
     title: 'Trayectoria',
     stations: [
-      { title: 'Soldador', note: '2020 · Ushuaia' },
-      { title: 'Técnico de reparación', note: '2021 · a cargo de un junior' },
-      { title: 'Desarrollador de software', note: '2022 · Newsan' },
-      { title: 'Colonia', note: '2024 – hoy · ciudadano UE' },
+      { title: 'Soldador de brazing', place: 'Newsan · Ushuaia', dates: '2020 – 2021' },
+      { title: 'Técnico de reparación', place: 'Newsan · Ushuaia', dates: '2021 – 2022' },
+      { title: 'Desarrollador de software', place: 'Newsan · Ushuaia', dates: '2022 – 2024' },
+      { title: 'Mudanza a Alemania', place: 'Italia · Colonia', dates: '2024 – hoy' },
     ],
     since: 'Desde 2024',
     story:

@@ -44,9 +44,16 @@
   margin-bottom: 4px;
 }
 
-.path__station p {
+.path__place {
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--text);
+}
+
+.path__dates {
+  margin-top: 2px;
   font-size: 12px;
-  color: var(--text-muted);
+  color: var(--text-faint);
 }
 
 .path__since {

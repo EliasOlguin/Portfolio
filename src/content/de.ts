@@ -81,6 +81,9 @@ export const de: Content = {
     howItWorks: 'So funktioniert es',
     zoom: 'Screenshot vergrößern',
     close: 'Schließen',
+    screenshots: 'Screenshots',
+    prev: 'Zurück',
+    next: 'Weiter',
     liveNote: 'Kostenloses Hosting: Der erste Aufruf kann bis zu einer Minute dauern.',
     doneToday: {
       description:
@@ -96,7 +99,16 @@ export const de: Content = {
         'Kontosicherheit: 2FA, CSRF-Schutz und E-Mail-Bestätigung.',
         'Getestete Streak- und Planungslogik (xUnit) und versionierte Releases.',
       ],
-      shot: 'DoneToday-Ansicht Heute: drei Gewohnheiten zum Abhaken mit aktuellem und bestem Streak, dazu die Wochenquote und das Tagesdiagramm (englische Oberfläche)',
+      gallery: [
+        'Heute: die Gewohnheiten des Tages mit ihren Serien und dem Wochenfortschritt.',
+        'Eine Gewohnheit abhaken, mit Hinweis zum Rückgängigmachen.',
+        'Gewohnheit erstellen: geplante Tage, optionales Tagesziel, Symbol und Farbe.',
+        'Alle Gewohnheiten, manuell sortierbar.',
+        'Statistik: die Woche, eine Aufschlüsselung pro Gewohnheit und ein Monatskalender.',
+        'Einstellungen: Zeitzone, Sprache, Design und Zwei-Faktor-Authentifizierung.',
+        'Registrierung mit den Passwortregeln im Blick.',
+      ],
+      shot: 'DoneToday-Ansicht Heute: drei Gewohnheiten zum Abhaken mit aktuellem und bestem Streak, dazu die Wochenquote und das Tagesdiagramm',
     },
     recycleApp: {
       description:
@@ -118,10 +130,10 @@ export const de: Content = {
   path: {
     title: 'Werdegang',
     stations: [
-      { title: 'Hartlöter', note: '2020 · Ushuaia' },
-      { title: 'Reparaturtechniker', note: '2021 · Junior betreut' },
-      { title: 'Softwareentwickler', note: '2022 · Newsan' },
-      { title: 'Köln', note: '2024 – heute · EU-Bürger' },
+      { title: 'Hartlöter', place: 'Newsan · Ushuaia', dates: '2020 – 2021' },
+      { title: 'Reparaturtechniker', place: 'Newsan · Ushuaia', dates: '2021 – 2022' },
+      { title: 'Softwareentwickler', place: 'Newsan · Ushuaia', dates: '2022 – 2024' },
+      { title: 'Umzug nach Deutschland', place: 'Italien · Köln', dates: '2024 – heute' },
     ],
     since: 'Seit 2024',
     story:

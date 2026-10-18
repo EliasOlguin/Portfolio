@@ -1,7 +1,17 @@
 import { screen, within } from '@testing-library/react'
-import { expect, test } from 'vitest'
+import userEvent from '@testing-library/user-event'
+import { beforeEach, expect, test } from 'vitest'
 import { renderIn } from '../test/render'
 import { Projects } from './Projects'
+
+beforeEach(() => {
+  HTMLDialogElement.prototype.showModal = function () {
+    this.setAttribute('open', '')
+  }
+  HTMLDialogElement.prototype.close = function () {
+    this.removeAttribute('open')
+  }
+})
 
 const card = (name: string) => screen.getByRole('heading', { level: 3, name }).closest('article')!
 
@@ -115,7 +125,7 @@ test('the live demo warns that free hosting can take a while to wake up', () => 
 test.each([
   ['en', '/media/donetoday-en.webp'],
   ['es', '/media/donetoday-es.webp'],
-  ['de', '/media/donetoday-en.webp'],
+  ['de', '/media/donetoday-de.webp'],
 ] as const)('in %s DoneToday shows the Today screen in a matching language', (lang, src) => {
   renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />, lang)
   const img = within(card('DoneToday')).getByRole('img')
@@ -123,12 +133,23 @@ test.each([
   expect(img.getAttribute('alt')).toMatch(/streak|racha|Streak/)
 })
 
-test('the zoom dialog shows the uncropped screenshot of each project', () => {
+test.each(['en', 'es', 'de'] as const)(
+  'in %s the DoneToday gallery opens on the Today screen and has 7 screenshots in that language',
+  async (lang) => {
+    renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />, lang)
+    const dialog = card('DoneToday').querySelector('dialog')!
+    await userEvent.click(within(card('DoneToday')).getAllByRole('button')[0])
+    expect(dialog.querySelector('img')).toHaveAttribute(
+      'src',
+      `/media/donetoday/${lang}/01-today.webp`,
+    )
+    expect(within(dialog).getByText('1 / 7')).toBeInTheDocument()
+  },
+)
+
+test('the recycle-app gallery shows its single screenshot', async () => {
   renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />)
-  expect(card('DoneToday').querySelector('dialog img')).toHaveAttribute(
-    'src',
-    '/media/donetoday-en-full.webp',
-  )
+  await userEvent.click(within(card('recycle-app')).getAllByRole('button')[0])
   expect(card('recycle-app').querySelector('dialog img')).toHaveAttribute(
     'src',
     '/media/recycle-app.webp',
