@@ -53,20 +53,20 @@ export const es: Content = {
       {
         name: 'Sistema de trazabilidad de producción · módulo SPP',
         problem:
-          'La aplicación de escritorio anterior, hecha en Visual Basic, tenía los modelos y las validaciones escritos en el código: cada cambio de modelo, y cada validación de modelo y número de serie, había que actualizarlos a mano.',
+          'La aplicación de escritorio anterior, en Visual Basic, tenía modelos y validaciones escritos en el código: cada cambio de modelo implicaba editar código a mano.',
         contribution:
-          'Dentro de un sistema de trazabilidad usado en 6 fábricas, fui responsable de SPP, el módulo central para configurar y validar la producción: esquema de base de datos, lógica de negocio y reglas configurables con regex que verifican los códigos de componentes según un formato combinado (campos como modelo, año, número de serie y planta). También participé en la implantación en planta en Buenos Aires.',
+          'En un sistema de trazabilidad usado en 6 fábricas, fui responsable de SPP, su módulo central de configuración y validación (esquema, lógica de negocio, validaciones con regex). Participé en la implantación en Buenos Aires.',
         benefit:
-          'Los cambios de modelo y las reglas de validación pasaron a ser configuración en lugar de cambios de código, y el proceso se volvió dinámico. Los errores de ensamblaje se detectan antes de que la unidad avance en la línea. Lo usan a diario supervisores, ingeniería y gerencia de producción.',
+          'Los cambios de modelo y las validaciones pasaron de cambios de código a configuración. Los errores de ensamblaje se detectan antes de que la unidad avance; lo usan a diario supervisores, ingeniería y gerencia.',
       },
       {
         name: 'Control de seguridad ESD',
         problem:
           'Los controles de seguridad ESD en puestos críticos se registraban con papel y lápiz.',
         contribution:
-          'Desarrollé la aplicación de punta a punta: lógica de negocio, base de datos, gestión de personal y flujos de validación, integrada con un banco de pruebas con Raspberry Pi que informa resultados Good / No Good.',
+          'La desarrollé de punta a punta: lógica de negocio, base de datos, gestión de personal e integración con un banco de pruebas con Raspberry Pi (resultados Good / No Good).',
         benefit:
-          'Un registro digital riguroso reemplazó al papel: la aplicación detecta automáticamente, en cada turno, quién hizo el control ESD y quién no, actualiza el personal en cada cambio de turno y da a los supervisores un informe diario de cumplimiento.',
+          'Un registro digital por turno reemplazó al papel: muestra automáticamente quién hizo el control y quién no, actualiza el personal en cada cambio de turno y envía un informe diario a supervisión.',
       },
     ],
   },
@@ -78,10 +78,12 @@ export const es: Content = {
     play: 'Reproducir',
     pause: 'Pausar',
     howItWorks: 'Cómo funciona',
+    zoom: 'Ampliar captura',
+    close: 'Cerrar',
     liveNote: 'Hosting gratuito: la primera carga puede tardar hasta un minuto.',
     doneToday: {
       description:
-        'Un tracker de hábitos: programas tus hábitos, los marcas cada día y sigues tus rachas. En español, inglés y alemán.',
+        'Una app de seguimiento de hábitos: programas tus hábitos, los marcas cada día y sigues tus rachas. En español, inglés y alemán.',
       meta: 'Desde oct. 2026 · v1.2.2 · en vivo',
       steps: [
         'Hoy muestra los hábitos programados para el día; un toque los marca como hechos.',
@@ -101,13 +103,13 @@ export const es: Content = {
       meta: 'Desde oct. 2026 · en desarrollo',
       steps: [
         'Sacas una foto del objeto.',
-        'El modelo de visión solo identifica qué es, dentro de una lista cerrada de categorías.',
-        'Las reglas de tu ciudad deciden el contenedor; si el objeto tiene varios materiales, responde por cada parte.',
+        'Ves el contenedor correcto para tu ciudad; si el objeto tiene varios materiales, la respuesta es por parte.',
+        'Puedes reportar una respuesta errónea de forma anónima para que se corrijan las reglas.',
       ],
       highlights: [
+        'El modelo de visión solo identifica el objeto; las reglas de tu ciudad en la base de datos deciden el contenedor.',
         'La API key queda en el backend, y las fotos se analizan sin guardarse.',
         'Reglas en borrador para Köln, Düsseldorf y Berlín, cada una marcada según cómo se verificó con fuentes oficiales.',
-        'Feedback anónimo para corregir respuestas erróneas.',
       ],
       shot: 'Dos pantallas de recycle-app: una caja de galletitas separada entre el contenedor azul de papel y el amarillo de envases, y una pregunta sobre el color de un frasco de vidrio',
     },
@@ -122,7 +124,7 @@ export const es: Content = {
     ],
     since: 'Desde 2024',
     story:
-      'Me mudé a Alemania y completé el trámite de mi ciudadanía italiana (UE), que incluyó cinco meses en Italia. En paralelo estuve desarrollando proyectos personales, como los dos de arriba, y mejorando mi inglés.',
+      'Me mudé a Alemania y completé el trámite de reconocimiento de mi ciudadanía italiana (UE), que incluyó cinco meses en Italia. Mientras tanto estuve desarrollando proyectos personales, incluidos DoneToday y recycle-app, y mejorando mi inglés.',
   },
   education: {
     title: 'Formación',

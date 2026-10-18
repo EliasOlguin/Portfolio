@@ -155,10 +155,10 @@
 }
 
 .project__points {
-  margin: 0 0 20px;
+  margin: 0 0 12px;
   padding-left: 18px;
   font-size: 14px;
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 .project__points li + li {
@@ -303,17 +303,31 @@
   margin: -4px 0 10px;
 }
 
-.project__subhead {
-  margin: 16px 0 6px;
-  font-size: 11px;
-  font-weight: 400;
+.project__more {
+  margin: 0 0 16px;
+}
+
+.project__more summary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--text-faint);
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.project__more summary:hover {
+  color: var(--text-strong);
+}
+
+.project__more[open] summary {
+  margin-bottom: 6px;
 }
 
 .project__steps {
-  margin: 0 0 16px;
+  margin: 0;
   padding-left: 20px;
   font-size: 14px;
   color: var(--text);

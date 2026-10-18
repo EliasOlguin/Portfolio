@@ -1,0 +1,63 @@
+.zoom {
+  position: relative;
+}
+
+.zoom__open {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  z-index: 2;
+  min-height: 36px;
+  padding: 0 12px;
+  font-size: 12px;
+  color: var(--text-strong);
+  background: rgb(10 10 10 / 0.8);
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  cursor: zoom-in;
+}
+
+.zoom__open:hover {
+  border-color: var(--text-muted);
+}
+
+.zoom__dialog {
+  width: fit-content;
+  max-width: 94vw;
+  max-height: 92vh;
+  padding: 44px 12px 12px;
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  overflow: auto;
+}
+
+.zoom__dialog::backdrop {
+  background: rgb(0 0 0 / 0.8);
+}
+
+/* The full screenshot keeps its own proportions; nothing is cropped. */
+.zoom__dialog img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  /* Whole screenshot in view: fit the height left after the Close bar. */
+  max-height: calc(92vh - 60px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.zoom__close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  min-height: 30px;
+  padding: 0 12px;
+  font-size: 12px;
+  color: var(--text-strong);
+  background: none;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  cursor: pointer;
+}

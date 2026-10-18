@@ -33,6 +33,8 @@ export type Content = {
     play: string
     pause: string
     howItWorks: string
+    zoom: string
+    close: string
     liveNote: string
     doneToday: Project
     recycleApp: Project

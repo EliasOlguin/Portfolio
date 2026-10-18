@@ -41,7 +41,7 @@ test('each system explains the problem, my contribution and the operational bene
 test('the SPP entry scopes my part to the core module of a system used in six factories', () => {
   renderIn(<Experience />)
   const text = document.body.textContent ?? ''
-  expect(text).toMatch(/responsible for SPP, the core module/)
+  expect(text).toMatch(/responsible for SPP, its core configuration and validation module/)
   expect(text).toMatch(/used in 6 factories/)
 })
 
@@ -68,9 +68,13 @@ test('the problems describe what was there before, as Elias reported it', () => 
   expect(problems[1]).toMatch(/paper/)
 })
 
-test('the SPP rules validate a combined code format, not a made-up metric', () => {
+test('the Newsan entries stay short and keep the before/after', () => {
   renderIn(<Experience />)
-  const text = document.body.textContent ?? ''
-  expect(text).toMatch(/model, year, serial number and plant/)
+  const facts = [...document.querySelectorAll('.job__facts dd')].map((d) => d.textContent ?? '')
+  for (const f of facts) expect(f.length).toBeLessThanOrEqual(220)
+  const text = facts.join(' ')
+  expect(text).toMatch(/configuration instead of code changes/)
+  expect(text).toMatch(/per shift/)
+  expect(text).not.toMatch(/model, year, serial number and plant/)
   expect(text).not.toMatch(/\d+\s?%/)
 })

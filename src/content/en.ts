@@ -47,19 +47,19 @@ export const en: Content = {
       {
         name: 'Production Traceability System · SPP module',
         problem:
-          'The previous desktop app, written in Visual Basic, had models and validations hard-coded: every model change, and every model and serial-number check, had to be updated by hand.',
+          'The previous Visual Basic desktop app had models and validations hard-coded, so every model change meant editing code by hand.',
         contribution:
-          'Within a traceability system used in 6 factories, I was responsible for SPP, the core module for configuring and validating production: database schema, business logic and configurable regex rules that check component codes against a combined format (fields such as model, year, serial number and plant). I also took part in the on-site rollout in Buenos Aires.',
+          'In a traceability system used in 6 factories, I was responsible for SPP, its core configuration and validation module (schema, business logic, regex checks). I also joined the on-site rollout in Buenos Aires.',
         benefit:
-          'Model changes and validation rules became configuration instead of code changes, so the process turned dynamic. Assembly errors are caught before units move down the line. Supervisors, engineering and production management use it daily.',
+          'Model changes and validation rules became configuration instead of code changes. Assembly errors are caught before units move on, and supervisors, engineering and management use it daily.',
       },
       {
         name: 'ESD Safety Control',
         problem: 'ESD safety checks at critical workstations were recorded with pen and paper.',
         contribution:
-          'I built the application end to end: business logic, database, personnel management and validation flows, integrated with a Raspberry Pi test rig that reports Good / No Good results.',
+          'I built it end to end: business logic, database, personnel management and integration with a Raspberry Pi test rig (Good / No Good results).',
         benefit:
-          'A rigorous digital record replaced the paper log: the app detects automatically, for each shift, who has done the ESD check and who has not, updates personnel at shift change and gives supervisors a daily compliance report.',
+          'A digital record per shift replaced the paper log: it shows automatically who has done the check and who has not, updates staff at shift change and sends supervisors a daily report.',
       },
     ],
   },
@@ -71,6 +71,8 @@ export const en: Content = {
     play: 'Play',
     pause: 'Pause',
     howItWorks: 'How it works',
+    zoom: 'Enlarge screenshot',
+    close: 'Close',
     liveNote: 'Free hosting: the first load can take up to a minute.',
     doneToday: {
       description:
@@ -94,13 +96,13 @@ export const en: Content = {
       meta: 'Since Oct 2026 · in development',
       steps: [
         'Take a photo of the item.',
-        'The vision model only identifies what it is, from a fixed list of categories.',
-        'Your city’s rules decide the bin; items made of several materials get an answer per part.',
+        'Get the right bin for your city; items made of several materials get an answer per part.',
+        'Report a wrong answer anonymously, so the rules can be corrected.',
       ],
       highlights: [
+        'The vision model only identifies the item; your city’s rules in the database decide the bin.',
         'The API key stays on the backend, and photos are analysed but not stored.',
         'Draft rules for Köln, Düsseldorf and Berlin, each marked by how it was checked against official sources.',
-        'Anonymous feedback to correct wrong answers.',
       ],
       shot: 'Two recycle-app screens: a cookie box split into the blue paper bin and the yellow packaging bin, and a question about the colour of a glass jar',
     },
@@ -115,7 +117,7 @@ export const en: Content = {
     ],
     since: 'Since 2024',
     story:
-      'I moved to Germany and completed my Italian (EU) citizenship, including five months in Italy for the process. In parallel I have been building personal projects, such as the two above, and improving my English.',
+      'I moved to Germany and completed the process to have my Italian (EU) citizenship recognised, which included five months in Italy. Meanwhile I have been building personal projects, including DoneToday and recycle-app, and improving my English.',
   },
   education: {
     title: 'Education',

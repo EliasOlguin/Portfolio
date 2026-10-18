@@ -6,7 +6,7 @@ import './SectionNav.css'
 
 export function SectionNav() {
   const { t } = useLang()
-  const active = useActiveSection(SECTION_IDS)
+  const { active, choose } = useActiveSection(SECTION_IDS)
   const listRef = useRef<HTMLUListElement>(null)
   const barRef = useRef<HTMLLIElement>(null)
 
@@ -39,7 +39,11 @@ export function SectionNav() {
       <ul ref={listRef} className="snav__list">
         {SECTION_IDS.map((id) => (
           <li key={id}>
-            <a href={`#${id}`} aria-current={active === id ? 'location' : undefined}>
+            <a
+              href={`#${id}`}
+              aria-current={active === id ? 'location' : undefined}
+              onClick={() => choose(id)}
+            >
               {labels[id]}
             </a>
           </li>

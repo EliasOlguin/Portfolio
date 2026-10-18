@@ -1,4 +1,5 @@
 import { act, screen, within } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import { afterEach, beforeEach, expect, test, vi } from 'vitest'
 import { renderIn } from '../test/render'
 import { SECTION_IDS } from '../sectionIds'
@@ -139,5 +140,14 @@ test('the last section becomes current once it is fully visible, even outside th
   report([['contact', true]], end)
   expect(within(nav()).getByRole('link', { current: 'location' })).toHaveTextContent('Contact')
   report([['contact', false]], end)
+  expect(within(nav()).getByRole('link', { current: 'location' })).toHaveTextContent('Education')
+})
+
+test('a section chosen in the menu stays current while the page scrolls to it', async () => {
+  renderIn(<SectionNav />)
+  const end = observers.find((o) => o !== band())!
+  await userEvent.click(within(nav()).getByRole('link', { name: 'Education' }))
+  // Scrolling to the bottom also makes the last section fully visible.
+  report([['contact', true]], end)
   expect(within(nav()).getByRole('link', { current: 'location' })).toHaveTextContent('Education')
 })

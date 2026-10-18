@@ -1,6 +1,7 @@
 import { Chips } from '../components/Chips'
 import { LoopVideo } from '../components/LoopVideo'
 import { Section } from '../components/Section'
+import { ShotZoom } from '../components/ShotZoom'
 import { useLang } from '../LangProvider'
 import { links, projectStack, recordedClips } from '../links'
 
@@ -8,6 +9,8 @@ type CardProps = {
   name: string
   media: string | null
   shot: string
+  /** Uncropped image for the zoom dialog; defaults to `<shot>-full`. */
+  fullShot?: string
   copy: { description: string; meta: string; steps: string[]; highlights: string[]; shot: string }
   howItWorks: string
   note?: string
@@ -15,39 +18,46 @@ type CardProps = {
   actions: { label: string; href: string; external: boolean }[]
 }
 
-function ProjectCard({ name, media, shot, copy, stack, actions, howItWorks, note }: CardProps) {
-  const stepsId = `${shot}-steps`
+function ProjectCard({
+  name,
+  media,
+  shot,
+  fullShot = `${shot}-full`,
+  copy,
+  stack,
+  actions,
+  howItWorks,
+  note,
+}: CardProps) {
   return (
     <article className="project sheen">
       {media ? (
         <LoopVideo src={`/media/${media}.mp4`} poster={`/media/${media}.jpg`} label={name} />
       ) : (
-        <img
-          className="project__shot"
+        <ShotZoom
+          name={name}
           src={`/media/${shot}.webp`}
+          fullSrc={`/media/${fullShot}.webp`}
           alt={copy.shot}
-          width={960}
-          height={600}
-          loading="lazy"
         />
       )}
       <div className="project__body">
         <h3>{name}</h3>
         <p className="project__meta mono">{copy.meta}</p>
         <p className="project__desc">{copy.description}</p>
-        <h4 id={stepsId} className="project__subhead mono">
-          {howItWorks}
-        </h4>
-        <ol className="project__steps" aria-labelledby={stepsId}>
-          {copy.steps.map((s) => (
-            <li key={s}>{s}</li>
-          ))}
-        </ol>
         <ul className="project__points">
           {copy.highlights.map((h) => (
             <li key={h}>{h}</li>
           ))}
         </ul>
+        <details className="project__more">
+          <summary className="mono">{howItWorks}</summary>
+          <ol className="project__steps">
+            {copy.steps.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ol>
+        </details>
         <Chips items={stack} />
         <p className="project__links mono">
           {actions.map((a) => (
@@ -89,6 +99,8 @@ export function Projects({ clips = recordedClips }: { clips?: typeof recordedCli
         <ProjectCard
           name="recycle-app"
           shot="recycle-app"
+          // Already shows both screens uncropped.
+          fullShot="recycle-app"
           media={clips.recycleApp ? 'recycle-app' : null}
           copy={p.recycleApp}
           howItWorks={p.howItWorks}

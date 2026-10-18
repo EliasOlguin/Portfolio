@@ -54,20 +54,20 @@ export const de: Content = {
       {
         name: 'Produktionsrückverfolgung · SPP-Modul',
         problem:
-          'Die bisherige Desktop-Anwendung in Visual Basic hatte Modelle und Prüfungen fest im Code: Jeder Modellwechsel und jede Prüfung von Modell und Seriennummer musste von Hand angepasst werden.',
+          'Die bisherige Desktop-Anwendung in Visual Basic hatte Modelle und Prüfungen fest im Code: Jeder Modellwechsel bedeutete eine manuelle Codeänderung.',
         contribution:
-          'Innerhalb eines Rückverfolgungssystems, das in 6 Werken genutzt wird, war ich für SPP verantwortlich, das Kernmodul zur Konfiguration und Validierung der Produktion: Datenbankschema, Geschäftslogik und konfigurierbare Regex-Regeln, die Bauteilcodes gegen ein kombiniertes Format prüfen (Felder wie Modell, Jahr, Seriennummer und Werk). Außerdem habe ich bei der Einführung vor Ort in Buenos Aires mitgearbeitet.',
+          'In einem Rückverfolgungssystem für 6 Werke war ich für SPP verantwortlich, das Kernmodul für Konfiguration und Validierung (Schema, Geschäftslogik, Regex-Prüfungen). Bei der Einführung in Buenos Aires war ich vor Ort.',
         benefit:
-          'Modellwechsel und Prüfregeln wurden zu Konfiguration statt Codeänderungen, der Prozess wurde dadurch flexibel. Montagefehler werden erkannt, bevor ein Gerät weiterläuft. Schichtleitung, Engineering und Produktionsmanagement nutzen es täglich.',
+          'Modellwechsel und Prüfregeln sind Konfiguration statt Codeänderung. Montagefehler werden erkannt, bevor ein Gerät weiterläuft; Schichtleitung, Engineering und Management nutzen es täglich.',
       },
       {
         name: 'ESD-Sicherheitskontrolle',
         problem:
           'ESD-Prüfungen an kritischen Arbeitsplätzen wurden mit Stift und Papier dokumentiert.',
         contribution:
-          'Ich habe die Anwendung End-to-End entwickelt: Geschäftslogik, Datenbank, Personalverwaltung und Validierungsabläufe, angebunden an einen Raspberry-Pi-Prüfstand, der Good-/No-Good-Ergebnisse liefert.',
+          'Ich habe sie End-to-End entwickelt: Geschäftslogik, Datenbank, Personalverwaltung und Anbindung an einen Raspberry-Pi-Prüfstand (Good / No Good).',
         benefit:
-          'Eine konsequente digitale Erfassung ersetzte das Papierprotokoll: Die Anwendung erkennt pro Schicht automatisch, wer die ESD-Prüfung durchgeführt hat und wer nicht, aktualisiert das Personal bei Schichtwechsel und liefert der Schichtleitung einen täglichen Compliance-Bericht.',
+          'Eine digitale Erfassung pro Schicht ersetzte das Papier: Sie zeigt automatisch, wer geprüft hat und wer nicht, aktualisiert das Personal bei Schichtwechsel und liefert einen täglichen Bericht.',
       },
     ],
   },
@@ -79,6 +79,8 @@ export const de: Content = {
     play: 'Abspielen',
     pause: 'Pausieren',
     howItWorks: 'So funktioniert es',
+    zoom: 'Screenshot vergrößern',
+    close: 'Schließen',
     liveNote: 'Kostenloses Hosting: Der erste Aufruf kann bis zu einer Minute dauern.',
     doneToday: {
       description:
@@ -102,13 +104,13 @@ export const de: Content = {
       meta: 'Seit Okt. 2026 · in Entwicklung',
       steps: [
         'Gegenstand fotografieren.',
-        'Das Bildmodell erkennt nur, was es ist, aus einer festen Liste von Kategorien.',
-        'Die Regeln der Stadt entscheiden über die Tonne; bei mehreren Materialien gibt es eine Antwort pro Teil.',
+        'Die passende Tonne für die eigene Stadt sehen; bei mehreren Materialien gibt es eine Antwort pro Teil.',
+        'Falsche Antworten anonym melden, damit die Regeln korrigiert werden können.',
       ],
       highlights: [
+        'Das Bildmodell erkennt nur den Gegenstand; die Regeln der eigenen Stadt in der Datenbank entscheiden über die Tonne.',
         'Der API-Schlüssel bleibt im Backend, Fotos werden analysiert, aber nicht gespeichert.',
         'Regelentwürfe für Köln, Düsseldorf und Berlin, jeweils markiert, wie sie mit offiziellen Quellen geprüft wurden.',
-        'Anonymes Feedback, um falsche Antworten zu korrigieren.',
       ],
       shot: 'Zwei Screens von recycle-app: eine Keksschachtel, aufgeteilt in die blaue Papiertonne und die gelbe Wertstofftonne, und eine Frage nach der Farbe eines Glases',
     },
@@ -123,7 +125,7 @@ export const de: Content = {
     ],
     since: 'Seit 2024',
     story:
-      'Ich bin nach Deutschland gezogen und habe meine italienische (EU-)Staatsbürgerschaft abgeschlossen, wofür ich fünf Monate in Italien war. Parallel habe ich eigene Projekte entwickelt, etwa die beiden oben, und mein Englisch verbessert.',
+      'Ich bin nach Deutschland gezogen und habe das Verfahren zur Anerkennung meiner italienischen Staatsbürgerschaft abgeschlossen; dafür war ich fünf Monate in Italien. Parallel habe ich eigene Projekte entwickelt, darunter DoneToday und recycle-app, und mein Englisch verbessert.',
   },
   education: {
     title: 'Ausbildung',

@@ -72,13 +72,29 @@ test('a project with a recorded clip shows the video instead of the still', () =
   expect(container.querySelector('img')).toBeNull()
 })
 
-test('each card explains how the product works without an account', () => {
+test('each card shows at most three key points up front', () => {
   renderIn(<Projects />)
   for (const name of ['DoneToday', 'recycle-app']) {
-    const c = within(card(name))
-    expect(c.getByText('How it works')).toBeInTheDocument()
-    expect(c.getByRole('list', { name: 'How it works' }).children.length).toBeGreaterThanOrEqual(3)
+    const points = card(name).querySelector('.project__points')!
+    expect(points.children.length).toBeLessThanOrEqual(3)
   }
+})
+
+test('the step-by-step lives in a native disclosure, closed by default', () => {
+  renderIn(<Projects />)
+  for (const name of ['DoneToday', 'recycle-app']) {
+    const details = card(name).querySelector('details')!
+    expect(details).not.toHaveAttribute('open')
+    expect(details.querySelector('summary')).toHaveTextContent('How it works')
+    expect(details.querySelectorAll('li').length).toBeGreaterThanOrEqual(3)
+  }
+})
+
+test('recycle-app leads with the split between AI identification and city rules', () => {
+  renderIn(<Projects />)
+  const first = card('recycle-app').querySelector('.project__points li')!
+  expect(first.textContent).toMatch(/only identifies/)
+  expect(first.textContent).toMatch(/city/)
 })
 
 test('each card shows a verified start date and status', () => {
@@ -105,4 +121,16 @@ test.each([
   const img = within(card('DoneToday')).getByRole('img')
   expect(img).toHaveAttribute('src', src)
   expect(img.getAttribute('alt')).toMatch(/streak|racha|Streak/)
+})
+
+test('the zoom dialog shows the uncropped screenshot of each project', () => {
+  renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />)
+  expect(card('DoneToday').querySelector('dialog img')).toHaveAttribute(
+    'src',
+    '/media/donetoday-en-full.webp',
+  )
+  expect(card('recycle-app').querySelector('dialog img')).toHaveAttribute(
+    'src',
+    '/media/recycle-app.webp',
+  )
 })
