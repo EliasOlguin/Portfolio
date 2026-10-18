@@ -19,3 +19,5 @@ export const stack = {
   backend: 'C# · .NET · Node · REST',
   data: 'SQL Server · PostgreSQL · MySQL',
 }
+
+export const experienceStack = ['React', 'Redux', 'TypeScript', 'C# / .NET Core', 'SQL Server', 'Raspberry Pi']
