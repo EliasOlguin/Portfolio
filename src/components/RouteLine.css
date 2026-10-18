@@ -1,0 +1,76 @@
+.route {
+  position: fixed;
+  z-index: 1;
+  top: calc(var(--header-h) + 20px);
+  bottom: 20px;
+  left: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: var(--text-faint);
+  pointer-events: none;
+}
+
+.route__track {
+  --p: 0;
+  position: relative;
+  flex: 1;
+  width: 1px;
+  margin-left: 4px;
+  background: linear-gradient(180deg, var(--line-strong), #3a3d42 50%, var(--line-strong));
+}
+
+.route__tick {
+  position: absolute;
+  left: -3px;
+  width: 7px;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.route__marker {
+  position: absolute;
+  top: calc(var(--p) * 100%);
+  left: -4px;
+  width: 9px;
+  height: 9px;
+  margin-top: -4px;
+  border-radius: 50%;
+  background: var(--steel);
+  box-shadow: 0 0 0 3px var(--bg);
+}
+
+.route__now {
+  position: absolute;
+  left: 16px;
+  top: -3px;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* Labels need the wide-screen margin; below that only the line and the marker remain. */
+@media (max-width: 1199px) {
+  .route {
+    left: 6px;
+  }
+  .route__end,
+  .route__now {
+    display: none;
+  }
+  .route__tick {
+    display: none;
+  }
+  .route__track {
+    margin-left: 0;
+  }
+  .route__marker {
+    left: -3px;
+    width: 7px;
+    height: 7px;
+    margin-top: -3px;
+    box-shadow: 0 0 0 2px var(--bg);
+  }
+}

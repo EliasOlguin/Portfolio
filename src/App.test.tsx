@@ -60,3 +60,8 @@ test('every menu link points at a section that exists', () => {
   for (const link of within(nav).getAllByRole('link'))
     expect(document.querySelector(link.getAttribute('href')!)).not.toBeNull()
 })
+
+test('the page carries the route line', () => {
+  const { container } = render(<App />)
+  expect(container.querySelector('.route')).toHaveAttribute('aria-hidden', 'true')
+})

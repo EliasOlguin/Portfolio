@@ -179,7 +179,28 @@
 
 /* Contact */
 .contact {
+  position: relative;
+  overflow: hidden;
   text-align: center;
+}
+
+/* The Rhine at Köln: where the route along the left margin arrives. */
+.contact__river {
+  position: absolute;
+  inset: auto 0 0;
+  color: var(--contour);
+  pointer-events: none;
+  mask-image: linear-gradient(180deg, transparent, #000 40%);
+}
+
+.contact__river svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.contact__body {
+  position: relative;
 }
 
 .contact__title {

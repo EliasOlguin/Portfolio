@@ -7,3 +7,9 @@ test('the email address is visible as text, so it can be copied without a mail c
   renderIn(<Contact />)
   expect(screen.getByText('eliasolguinde@gmail.com')).toBeVisible()
 })
+
+test('the Rhine drawing behind the contact is decorative', () => {
+  const { container } = renderIn(<Contact />)
+  const river = container.querySelector('.contact__river')
+  expect(river).toHaveAttribute('aria-hidden', 'true')
+})

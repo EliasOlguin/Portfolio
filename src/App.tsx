@@ -1,4 +1,5 @@
 import { Header } from './components/Header'
+import { RouteLine } from './components/RouteLine'
 import { LangProvider } from './LangProvider'
 import { Hero } from './sections/Hero'
 import { Experience } from './sections/Experience'
@@ -14,6 +15,7 @@ export default function App() {
   return (
     <LangProvider>
       <Header />
+      <RouteLine />
       <main id="main" tabIndex={-1}>
         <Hero />
         <Metrics />
