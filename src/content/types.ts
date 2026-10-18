@@ -1,5 +1,5 @@
 type Item = { name: string; text: string }
-type Project = { description: string; highlights: string[] }
+type Project = { description: string; highlights: string[]; shot: string }
 
 export type Content = {
   nav: { skip: string; language: string; stack: string; sections: string; contact: string }

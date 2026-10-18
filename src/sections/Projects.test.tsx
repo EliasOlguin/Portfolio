@@ -50,3 +50,24 @@ test('every card lists its stack', () => {
   for (const name of ['DoneToday', 'recycle-app'])
     expect(within(card(name)).getByRole('list', { name: 'Stack' })).toBeInTheDocument()
 })
+
+test('a project without a recorded clip shows a lazy still with fixed size and alt text', () => {
+  renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />)
+  for (const [name, src] of [
+    ['DoneToday', '/media/donetoday.webp'],
+    ['recycle-app', '/media/recycle-app.webp'],
+  ]) {
+    const img = within(card(name)).getByRole('img')
+    expect(img).toHaveAttribute('src', src)
+    expect(img).toHaveAccessibleName()
+    expect(img).toHaveAttribute('loading', 'lazy')
+    expect(img).toHaveAttribute('width', '960')
+    expect(img).toHaveAttribute('height', '600')
+  }
+})
+
+test('a project with a recorded clip shows the video instead of the still', () => {
+  const { container } = renderIn(<Projects clips={{ doneToday: true, recycleApp: true }} />)
+  expect(container.querySelectorAll('video')).toHaveLength(2)
+  expect(container.querySelector('img')).toBeNull()
+})
