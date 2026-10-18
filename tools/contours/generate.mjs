@@ -66,7 +66,10 @@ function simplify(pts) {
   let max = 0, idx = 0
   for (let i = 1; i < pts.length - 1; i++) {
     const d = Math.abs((bx - ax) * (ay - pts[i][1]) - (ax - pts[i][0]) * (by - ay)) / len
-    if (d > max) (max = d), (idx = i)
+    if (d > max) {
+      max = d
+      idx = i
+    }
   }
   if (max <= TOL) return [pts[0], pts[pts.length - 1]]
   return [...simplify(pts.slice(0, idx + 1)).slice(0, -1), ...simplify(pts.slice(idx))]
@@ -86,7 +89,10 @@ function openAtEdges(ring) {
   let run = []
   for (const p of ring) {
     if (onEdge(p)) {
-      if (run.length) runs.push(run), (run = [])
+      if (run.length) {
+        runs.push(run)
+        run = []
+      }
     } else run.push(p)
   }
   if (run.length) runs.push(run)

@@ -21,3 +21,8 @@ export const stack = {
 }
 
 export const experienceStack = ['React', 'Redux', 'TypeScript', 'C# / .NET Core', 'SQL Server', 'Raspberry Pi']
+
+export const projectStack = {
+  doneToday: ['React 19', 'TypeScript', 'ASP.NET Core', 'PostgreSQL'],
+  recycleApp: ['React Native', 'TypeScript', 'Fastify', 'PostgreSQL'],
+}

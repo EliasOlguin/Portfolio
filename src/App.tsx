@@ -3,6 +3,7 @@ import { LangProvider } from './LangProvider'
 import { Hero } from './sections/Hero'
 import { Experience } from './sections/Experience'
 import { Metrics } from './sections/Metrics'
+import { Projects } from './sections/Projects'
 import './sections/sections.css'
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
         <Hero />
         <Metrics />
         <Experience />
+        <Projects />
       </main>
     </LangProvider>
   )
