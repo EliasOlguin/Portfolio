@@ -1,7 +1,7 @@
 .hero {
   position: relative;
   overflow: hidden;
-  padding: clamp(40px, 8vw, 96px) 0 clamp(56px, 9vw, 112px);
+  padding: clamp(32px, 6vw, 72px) 0 clamp(40px, 7vw, 88px);
 }
 
 .hero__contours {
@@ -49,8 +49,15 @@
   max-width: 34ch;
   font-size: clamp(18px, 2.4vw, 22px);
   line-height: 1.45;
-  color: var(--text);
-  margin-bottom: 28px;
+  color: var(--text-strong);
+  margin-bottom: 12px;
+}
+
+.hero__story {
+  max-width: 52ch;
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
 }
 
 .hero__spec {

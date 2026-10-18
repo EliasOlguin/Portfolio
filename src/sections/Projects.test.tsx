@@ -71,3 +71,27 @@ test('a project with a recorded clip shows the video instead of the still', () =
   expect(container.querySelectorAll('video')).toHaveLength(2)
   expect(container.querySelector('img')).toBeNull()
 })
+
+test('each card explains how the product works without an account', () => {
+  renderIn(<Projects />)
+  for (const name of ['DoneToday', 'recycle-app']) {
+    const c = within(card(name))
+    expect(c.getByText('How it works')).toBeInTheDocument()
+    expect(c.getByRole('list', { name: 'How it works' }).children.length).toBeGreaterThanOrEqual(3)
+  }
+})
+
+test('each card shows a verified start date and status', () => {
+  renderIn(<Projects />)
+  expect(within(card('DoneToday')).getByText('Since Oct 2026 · v1.2.2 · live')).toBeInTheDocument()
+  expect(
+    within(card('recycle-app')).getByText('Since Oct 2026 · in development'),
+  ).toBeInTheDocument()
+})
+
+test('the live demo warns that free hosting can take a while to wake up', () => {
+  renderIn(<Projects />)
+  expect(
+    within(card('DoneToday')).getByText(/first load can take up to a minute/),
+  ).toBeInTheDocument()
+})

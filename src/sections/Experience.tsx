@@ -15,7 +15,14 @@ export function Experience() {
           {e.items.map((item) => (
             <div key={item.name} className="job__item">
               <h4>{item.name}</h4>
-              <p>{item.text}</p>
+              <dl className="job__facts">
+                <dt>{e.labels.problem}</dt>
+                <dd>{item.problem}</dd>
+                <dt>{e.labels.contribution}</dt>
+                <dd>{item.contribution}</dd>
+                <dt>{e.labels.benefit}</dt>
+                <dd>{item.benefit}</dd>
+              </dl>
             </div>
           ))}
         </div>

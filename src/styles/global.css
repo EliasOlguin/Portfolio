@@ -162,7 +162,7 @@ a {
 
 .section {
   scroll-margin-top: var(--header-h);
-  padding: clamp(56px, 9vw, 96px) 0;
+  padding: clamp(40px, 6vw, 72px) 0;
   border-top: 1px solid var(--line);
 }
 
@@ -172,5 +172,5 @@ a {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--text-faint);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
 }

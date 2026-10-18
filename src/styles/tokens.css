@@ -8,8 +8,8 @@
   /* All text colors pass WCAG AA on --bg and --surface. */
   --text: #c7c9cc;
   --text-strong: #e3e5e8;
-  --text-muted: #8a8f96;
-  --text-faint: #7d8289;
+  --text-muted: #a3a8af;
+  --text-faint: #959aa1;
 
   --chrome: linear-gradient(180deg, #f4f5f7 0%, #9aa0a8 45%, #e6e8eb 55%, #6c727a 100%);
   --steel: linear-gradient(180deg, #e9ebee, #a7acb3);

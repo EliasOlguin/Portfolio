@@ -12,6 +12,7 @@ export function Hero() {
     [t.hero.rows.backend, stack.backend],
     [t.hero.rows.data, stack.data],
     [t.hero.rows.base, t.hero.base],
+    [t.hero.rows.open, t.hero.open],
   ]
 
   return (
@@ -24,6 +25,7 @@ export function Hero() {
         </p>
         <h1 className="hero__name chrome">Elias Olguin</h1>
         <p className="hero__headline">{t.hero.headline}</p>
+        <p className="hero__story">{t.hero.story}</p>
         <table className="hero__spec mono">
           <tbody>
             {rows.map(([label, value]) => (

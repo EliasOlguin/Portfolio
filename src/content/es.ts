@@ -10,32 +10,63 @@ export const es: Content = {
   },
   hero: {
     headline:
-      'Desarrollador full-stack. React y TypeScript en el front, C#/.NET y SQL detrás, en producción.',
-    rows: { frontend: 'Frontend', backend: 'Backend', data: 'Datos', base: 'Base' },
-    base: 'Colonia, DE · ciudadano UE · disponible ya',
+      'Desarrollador full-stack con experiencia en la industria. React y TypeScript en el front, C#/.NET y SQL detrás.',
+    story:
+      'Empecé en una línea de producción, aprendí a programar de noche y terminé desarrollando software que se usa en esa misma operación.',
+    rows: {
+      frontend: 'Frontend',
+      backend: 'Backend',
+      data: 'Datos',
+      base: 'Base',
+      open: 'Abierto a',
+    },
+    base: 'Colonia, Alemania · ciudadano UE · disponible ya',
+    open: 'Roles full-stack · remoto · reubicación',
     cta: { cv: 'Descargar CV', github: 'GitHub', linkedin: 'LinkedIn', email: 'Email' },
   },
   metrics: {
     title: 'En resumen',
     items: [
-      { value: '2 años', label: 'full-stack profesional' },
-      { value: '6', label: 'fábricas usan mi sistema' },
-      { value: '24/7', label: 'entorno de producción' },
-      { value: '2×', label: 'ascendido por mérito' },
+      { kind: 'Rol', value: '2022 – 2024', label: 'desarrollador de software en Newsan' },
+      {
+        kind: 'Alcance del sistema',
+        value: '6',
+        label: 'fábricas usan el sistema de trazabilidad en el que trabajé',
+      },
+      {
+        kind: 'Progresión',
+        value: '20 meses',
+        label: 'de la línea de producción a desarrollador de software',
+      },
     ],
   },
   experience: {
     title: 'Experiencia',
     role: 'Desarrollador de software · Newsan',
-    place: 'Ushuaia, AR · 2022 – 2024',
+    place: 'Ushuaia, AR · abr. 2022 – ene. 2024 · entorno industrial 24/7',
+    labels: {
+      problem: 'Problema',
+      contribution: 'Mi aporte',
+      benefit: 'Beneficio operativo',
+    },
     items: [
       {
-        name: 'Sistema de trazabilidad de producción (SPP)',
-        text: 'Responsable del módulo central que configura y valida la producción en 6 fábricas. Diseñé el esquema de base de datos y las reglas de validación con regex que detectan errores de ensamblado antes de que la unidad avance en la línea. Ayudé a reemplazar un sistema de escritorio lento y lo implementé en planta en Buenos Aires.',
+        name: 'Sistema de trazabilidad de producción · módulo SPP',
+        problem:
+          'Los procesos productivos se configuraban y validaban en un sistema de escritorio heredado, lento y rígido.',
+        contribution:
+          'Dentro de un sistema de trazabilidad usado en 6 fábricas, fui responsable de SPP, el módulo central para configurar y validar la producción: esquema de base de datos, lógica de negocio y reglas de validación configurables con regex que verifican los códigos de componentes. También participé en la implantación en planta en Buenos Aires.',
+        benefit:
+          'Los errores de ensamblaje se detectan antes de que la unidad avance en la línea, y el paso a una aplicación web mejoró la validación, la configuración y la visibilidad en todas las líneas. Lo usan a diario supervisores, ingeniería y gerencia de producción.',
       },
       {
         name: 'Control de seguridad ESD',
-        text: 'Desarrollé de punta a punta una app que controla la seguridad antiestática en puestos críticos: bancos de prueba con Raspberry Pi, lógica por turno que muestra quién falta validar y reportes diarios de cumplimiento para supervisores.',
+        problem:
+          'Había que controlar el cumplimiento de la seguridad antiestática (ESD) en puestos críticos.',
+        contribution:
+          'Desarrollé la aplicación de punta a punta: lógica de negocio, base de datos, gestión de personal y flujos de validación, integrada con un banco de pruebas con Raspberry Pi que informa resultados Good / No Good.',
+        benefit:
+          'La lógica por turnos muestra quién tiene pendiente la validación ESD, el personal se actualiza solo en cada cambio de turno y los supervisores reciben un informe diario de cumplimiento.',
       },
     ],
   },
@@ -46,9 +77,17 @@ export const es: Content = {
     video: 'Video demo',
     play: 'Reproducir',
     pause: 'Pausar',
+    howItWorks: 'Cómo funciona',
+    liveNote: 'Hosting gratuito: la primera carga puede tardar hasta un minuto.',
     doneToday: {
       description:
-        'Un tracker de hábitos con rachas, estadísticas, 2FA e inicio de sesión con Google, en 3 idiomas.',
+        'Un tracker de hábitos: programas tus hábitos, los marcas cada día y sigues tus rachas. En español, inglés y alemán.',
+      meta: 'Desde oct. 2026 · v1.2.2 · en vivo',
+      steps: [
+        'Hoy muestra los hábitos programados para el día; un toque los marca como hechos.',
+        'Cada hábito guarda su racha actual y la mejor.',
+        'Las estadísticas muestran totales semanales, un gráfico diario de cumplimiento y el detalle por hábito.',
+      ],
       highlights: [
         'Zona horaria por usuario: los horarios y las rachas siguen el día de cada persona.',
         'Seguridad de cuenta: 2FA, protección CSRF y confirmación de email.',
@@ -58,10 +97,16 @@ export const es: Content = {
     },
     recycleApp: {
       description:
-        'Saca una foto de un objeto y descubre en qué contenedor va, según las reglas de tu ciudad alemana.',
+        'Para quienes no conocen las reglas de separación de Alemania: sacas una foto del objeto antes de tirarlo y te dice en qué contenedor va según tu ciudad.',
+      meta: 'Desde oct. 2026 · en desarrollo',
+      steps: [
+        'Sacas una foto del objeto.',
+        'El modelo de visión solo identifica qué es, dentro de una lista cerrada de categorías.',
+        'Las reglas de tu ciudad deciden el contenedor; si el objeto tiene varios materiales, responde por cada parte.',
+      ],
       highlights: [
-        'La llamada al modelo de visión corre en el backend: la API key nunca viaja en la app.',
-        'Reglas de separación por ciudad sobre la respuesta del modelo.',
+        'La API key queda en el backend, y las fotos se analizan sin guardarse.',
+        'Reglas en borrador para Köln, Düsseldorf y Berlín, cada una marcada según cómo se verificó con fuentes oficiales.',
         'Feedback anónimo para corregir respuestas erróneas.',
       ],
       shot: 'Dos pantallas de recycle-app: una caja de galletitas separada entre el contenedor azul de papel y el amarillo de envases, y una pregunta sobre el color de un frasco de vidrio',
@@ -73,10 +118,11 @@ export const es: Content = {
       { title: 'Soldador', note: '2020 · Ushuaia' },
       { title: 'Técnico de reparación', note: '2021 · a cargo de un junior' },
       { title: 'Desarrollador de software', note: '2022 · Newsan' },
-      { title: 'Colonia', note: '2024 · ciudadano UE' },
+      { title: 'Colonia', note: '2024 – hoy · ciudadano UE' },
     ],
+    since: 'Desde 2024',
     story:
-      'Empecé en la línea de producción, aprendí a programar de noche y terminé construyendo el software con el que trabajaba mi antigua línea.',
+      'Me mudé a Alemania y completé el trámite de mi ciudadanía italiana (UE), que incluyó cinco meses en Italia. En paralelo estuve desarrollando proyectos personales, como los dos de arriba, y mejorando mi inglés.',
   },
   education: {
     title: 'Formación',
@@ -96,7 +142,7 @@ export const es: Content = {
   },
   contact: {
     headline: 'Construyamos algo.',
-    text: 'Abierto a roles full-stack en Colonia / NRW o remoto.',
+    text: 'Actualmente en Colonia, Alemania. Abierto a oportunidades full-stack, trabajo remoto y reubicación.',
     email: 'Escríbeme',
   },
   footer: { built: 'hecho con React, TypeScript y mate' },

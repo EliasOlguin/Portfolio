@@ -62,3 +62,18 @@ test.each([
   renderHero()
   expect(screen.getByRole('link', { name })).toHaveAttribute('href', href)
 })
+
+test('the first screen tells the factory-to-software story in one line', () => {
+  renderHero()
+  expect(
+    screen.getByText(
+      'I started on a factory production line, learned to code at night and went on to build software used in that same operation.',
+    ),
+  ).toBeInTheDocument()
+})
+
+test('the stack table states openness to remote work and relocation', () => {
+  renderHero()
+  expect(screen.getByRole('rowheader', { name: 'Open to' })).toBeInTheDocument()
+  expect(screen.getByText('Full-stack roles · remote · relocation')).toBeInTheDocument()
+})

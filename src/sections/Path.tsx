@@ -15,7 +15,10 @@ export function Path() {
           </li>
         ))}
       </ol>
-      <p className="path__story">{t.path.story}</p>
+      <div className="path__since">
+        <h3 className="mono">{t.path.since}</h3>
+        <p>{t.path.story}</p>
+      </div>
     </Section>
   )
 }

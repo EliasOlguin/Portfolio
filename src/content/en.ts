@@ -10,32 +10,57 @@ export const en: Content = {
   },
   hero: {
     headline:
-      'Full-stack developer. React and TypeScript on the front, C#/.NET and SQL behind it, shipped to production.',
-    rows: { frontend: 'Frontend', backend: 'Backend', data: 'Data', base: 'Base' },
-    base: 'Cologne, DE · EU citizen · available now',
+      'Full-stack developer with an industrial background. React and TypeScript on the front, C#/.NET and SQL behind it.',
+    story:
+      'I started on a factory production line, learned to code at night and went on to build software used in that same operation.',
+    rows: { frontend: 'Frontend', backend: 'Backend', data: 'Data', base: 'Base', open: 'Open to' },
+    base: 'Cologne, Germany · EU citizen · available now',
+    open: 'Full-stack roles · remote · relocation',
     cta: { cv: 'Download CV', github: 'GitHub', linkedin: 'LinkedIn', email: 'Email' },
   },
   metrics: {
     title: 'At a glance',
     items: [
-      { value: '2 yrs', label: 'professional full-stack' },
-      { value: '6', label: 'factories using my system' },
-      { value: '24/7', label: 'production environment' },
-      { value: '2×', label: 'promoted on merit' },
+      { kind: 'Role', value: '2022 – 2024', label: 'software developer at Newsan' },
+      {
+        kind: 'System scope',
+        value: '6',
+        label: 'factories use the traceability system I worked on',
+      },
+      {
+        kind: 'Progression',
+        value: '20 months',
+        label: 'from the production line to software developer',
+      },
     ],
   },
   experience: {
     title: 'Experience',
     role: 'Software Developer · Newsan',
-    place: 'Ushuaia, AR · 2022 – 2024',
+    place: 'Ushuaia, AR · Apr 2022 – Jan 2024 · 24/7 manufacturing environment',
+    labels: {
+      problem: 'Problem',
+      contribution: 'My contribution',
+      benefit: 'Operational benefit',
+    },
     items: [
       {
-        name: 'Production Traceability System (SPP)',
-        text: 'Owned the core module that configures and validates production in 6 factories. Designed the database schema and the regex validation rules that catch assembly errors before units move down the line. Helped replace a slow legacy desktop system and rolled it out on site in Buenos Aires.',
+        name: 'Production Traceability System · SPP module',
+        problem:
+          'Production processes were configured and validated in a slow, rigid legacy desktop system.',
+        contribution:
+          'Within a traceability system used in 6 factories, I was responsible for SPP, the core module for configuring and validating production: database schema, business logic and configurable regex rules that check component codes. I also took part in the on-site rollout in Buenos Aires.',
+        benefit:
+          'Assembly errors are caught before units move down the line, and the move to a web application improved validation, configuration and visibility across production lines. Supervisors, engineering and production management use it daily.',
       },
       {
         name: 'ESD Safety Control',
-        text: 'Built an end-to-end app that checks anti-static safety at critical workstations: Raspberry Pi test rigs, shift-aware logic that shows who still needs to test, and daily compliance reports for supervisors.',
+        problem:
+          'Anti-static (ESD) safety compliance had to be monitored at critical workstations.',
+        contribution:
+          'I built the application end to end: business logic, database, personnel management and validation flows, integrated with a Raspberry Pi test rig that reports Good / No Good results.',
+        benefit:
+          'Shift-aware logic shows who still needs ESD validation, personnel updates automatically at shift change, and supervisors get a daily compliance report.',
       },
     ],
   },
@@ -46,9 +71,17 @@ export const en: Content = {
     video: 'Demo video',
     play: 'Play',
     pause: 'Pause',
+    howItWorks: 'How it works',
+    liveNote: 'Free hosting: the first load can take up to a minute.',
     doneToday: {
       description:
-        'A habit tracker with streaks, statistics, 2FA and Google sign-in, in 3 languages.',
+        'A habit tracker: schedule habits, check them off each day and follow your streaks. In English, Spanish and German.',
+      meta: 'Since Oct 2026 · v1.2.2 · live',
+      steps: [
+        'Today shows the habits scheduled for the day; one tap marks them done.',
+        'Each habit keeps its current and best streak.',
+        'Statistics show weekly totals, a daily completion chart and a breakdown by habit.',
+      ],
       highlights: [
         'Per-user time zones: schedules and streaks follow each user’s own day.',
         'Account security: 2FA, CSRF protection and email confirmation.',
@@ -58,10 +91,16 @@ export const en: Content = {
     },
     recycleApp: {
       description:
-        'Photograph an item and find out which bin it goes in, following the rules of your German city.',
+        'For people new to Germany’s sorting rules: photograph an item before throwing it away and get the right bin for your city.',
+      meta: 'Since Oct 2026 · in development',
+      steps: [
+        'Take a photo of the item.',
+        'The vision model only identifies what it is, from a fixed list of categories.',
+        'Your city’s rules decide the bin; items made of several materials get an answer per part.',
+      ],
       highlights: [
-        'The AI vision call runs on the backend, so the API key never ships in the app.',
-        'City-specific sorting rules on top of the model’s answer.',
+        'The API key stays on the backend, and photos are analysed but not stored.',
+        'Draft rules for Köln, Düsseldorf and Berlin, each marked by how it was checked against official sources.',
         'Anonymous feedback to correct wrong answers.',
       ],
       shot: 'Two recycle-app screens: a cookie box split into the blue paper bin and the yellow packaging bin, and a question about the colour of a glass jar',
@@ -73,10 +112,11 @@ export const en: Content = {
       { title: 'Brazing welder', note: '2020 · Ushuaia' },
       { title: 'Repair technician', note: '2021 · led a junior' },
       { title: 'Software developer', note: '2022 · Newsan' },
-      { title: 'Cologne', note: '2024 · EU citizen' },
+      { title: 'Cologne', note: '2024 – now · EU citizen' },
     ],
+    since: 'Since 2024',
     story:
-      'I started on the factory floor, learned to code at night, and ended up building the software my old line ran on.',
+      'I moved to Germany and completed my Italian (EU) citizenship, including five months in Italy for the process. In parallel I have been building personal projects, such as the two above, and improving my English.',
   },
   education: {
     title: 'Education',
@@ -96,7 +136,7 @@ export const en: Content = {
   },
   contact: {
     headline: 'Let’s build something.',
-    text: 'Open to full-stack roles in Cologne / NRW or remote.',
+    text: 'Currently in Cologne, Germany. Open to full-stack opportunities, remote work and relocation.',
     email: 'Email me',
   },
   footer: { built: 'built with React, TypeScript & mate' },

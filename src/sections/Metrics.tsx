@@ -8,7 +8,10 @@ export function Metrics() {
       <dl className="metrics mono">
         {t.metrics.items.map((m) => (
           <div key={m.label} className="metrics__item">
-            <dt>{m.label}</dt>
+            <dt>
+              <span className="metrics__kind">{m.kind}</span>
+              <span className="metrics__label">{m.label}</span>
+            </dt>
             <dd>{m.value}</dd>
           </div>
         ))}

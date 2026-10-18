@@ -4,6 +4,15 @@ import { Footer } from '../components/Footer'
 import { renderIn } from '../test/render'
 import { Path } from './Path'
 
+test('the path explains the period since 2024 as context, not as a job', () => {
+  renderIn(<Path />)
+  const text = document.body.textContent ?? ''
+  expect(text).toMatch(/Since 2024/)
+  expect(text).toMatch(/citizenship/)
+  expect(text).toMatch(/personal projects/)
+  expect(text).toMatch(/English/)
+})
+
 test('the path is an ordered list of four stations', () => {
   renderIn(<Path />)
   const items = within(screen.getByRole('list')).getAllByRole('listitem')

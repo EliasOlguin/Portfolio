@@ -21,6 +21,8 @@ describe.each(LANGS.filter((l) => l !== 'en'))('%s content', (lang) => {
     expect(t.languages.items).toHaveLength(en.languages.items.length)
     expect(t.projects.doneToday.highlights).toHaveLength(en.projects.doneToday.highlights.length)
     expect(t.projects.recycleApp.highlights).toHaveLength(en.projects.recycleApp.highlights.length)
+    expect(t.projects.doneToday.steps).toHaveLength(en.projects.doneToday.steps.length)
+    expect(t.projects.recycleApp.steps).toHaveLength(en.projects.recycleApp.steps.length)
   })
 })
 

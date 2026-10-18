@@ -1,7 +1,7 @@
 /* Metrics */
 .metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 0;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -9,7 +9,7 @@
 
 .metrics__item {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   gap: 4px;
   padding: 20px;
   border-left: 1px solid var(--line);
@@ -25,21 +25,40 @@
   color: var(--text-strong);
 }
 
-.metrics dt {
-  font-size: 12px;
+.metrics__label {
+  font-size: 13px;
   overflow-wrap: anywhere;
   hyphens: auto;
   color: var(--text-muted);
 }
 
+.metrics__kind {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  order: -1;
+}
+
+/* Kind label above the value, description below it. */
+.metrics dt {
+  display: contents;
+}
+.metrics__label {
+  order: 2;
+}
+.metrics dd {
+  order: 1;
+}
+
 @media (max-width: 640px) {
   .metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
-  .metrics__item:nth-child(3) {
+  .metrics__item {
     border-left: 0;
   }
-  .metrics__item:nth-child(n + 3) {
+  .metrics__item + .metrics__item {
     border-top: 1px solid var(--line);
   }
 }
@@ -52,7 +71,7 @@
 .job__place {
   font-size: 13px;
   color: var(--text-muted);
-  margin: 6px 0 28px;
+  margin: 6px 0 20px;
 }
 
 .job__items {
@@ -69,9 +88,23 @@
   color: var(--text-strong);
 }
 
-.job__item p {
-  color: var(--text);
+.job__facts {
+  margin: 0;
   font-size: 15px;
+}
+
+.job__facts dt {
+  margin-top: 12px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.job__facts dd {
+  margin: 4px 0 0;
+  color: var(--text);
 }
 
 @media (max-width: 768px) {
@@ -262,4 +295,36 @@
   font-size: 14px;
   color: var(--text-muted);
   user-select: all;
+}
+
+.project__meta {
+  font-size: 12px;
+  color: var(--text-faint);
+  margin: -4px 0 10px;
+}
+
+.project__subhead {
+  margin: 16px 0 6px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.project__steps {
+  margin: 0 0 16px;
+  padding-left: 20px;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.project__steps li + li {
+  margin-top: 4px;
+}
+
+.project__note {
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--text-faint);
 }
