@@ -27,7 +27,7 @@ test('DoneToday links to the live app and the code in a new tab', () => {
 })
 
 test('recycle-app links to the code and the demo video', () => {
-  renderIn(<Projects />)
+  renderIn(<Projects clips={{ doneToday: true, recycleApp: true }} />)
   const c = within(card('recycle-app'))
   expect(c.getByRole('link', { name: 'Code' })).toHaveAttribute(
     'href',
@@ -37,6 +37,12 @@ test('recycle-app links to the code and the demo video', () => {
     'href',
     '/media/recycle-app.mp4',
   )
+})
+
+test('a project without a recorded clip shows no video and no video link', () => {
+  const { container } = renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />)
+  expect(container.querySelector('video')).toBeNull()
+  expect(screen.queryByRole('link', { name: 'Demo video' })).toBeNull()
 })
 
 test('every card lists its stack', () => {

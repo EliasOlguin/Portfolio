@@ -33,3 +33,6 @@ export const projectStack = {
   doneToday: ['React 19', 'TypeScript', 'ASP.NET Core', 'PostgreSQL'],
   recycleApp: ['React Native', 'TypeScript', 'Fastify', 'PostgreSQL'],
 }
+
+// Flip to true once the clip and its poster exist in public/media/ (see tools/record-demos).
+export const recordedClips = { doneToday: false, recycleApp: false }

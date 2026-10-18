@@ -2,11 +2,11 @@ import { Chips } from '../components/Chips'
 import { LoopVideo } from '../components/LoopVideo'
 import { Section } from '../components/Section'
 import { useLang } from '../LangProvider'
-import { links, projectStack } from '../links'
+import { links, projectStack, recordedClips } from '../links'
 
 type CardProps = {
   name: string
-  media: string
+  media: string | null
   copy: { description: string; highlights: string[] }
   stack: readonly string[]
   actions: { label: string; href: string; external: boolean }[]
@@ -15,7 +15,9 @@ type CardProps = {
 function ProjectCard({ name, media, copy, stack, actions }: CardProps) {
   return (
     <article className="project sheen">
-      <LoopVideo src={`/media/${media}.mp4`} poster={`/media/${media}.jpg`} label={name} />
+      {media && (
+        <LoopVideo src={`/media/${media}.mp4`} poster={`/media/${media}.jpg`} label={name} />
+      )}
       <div className="project__body">
         <h3>{name}</h3>
         <p className="project__desc">{copy.description}</p>
@@ -41,7 +43,7 @@ function ProjectCard({ name, media, copy, stack, actions }: CardProps) {
   )
 }
 
-export function Projects() {
+export function Projects({ clips = recordedClips }: { clips?: typeof recordedClips }) {
   const { t } = useLang()
   const p = t.projects
   return (
@@ -49,7 +51,7 @@ export function Projects() {
       <div className="projects">
         <ProjectCard
           name="DoneToday"
-          media="donetoday"
+          media={clips.doneToday ? 'donetoday' : null}
           copy={p.doneToday}
           stack={projectStack.doneToday}
           actions={[
@@ -59,12 +61,14 @@ export function Projects() {
         />
         <ProjectCard
           name="recycle-app"
-          media="recycle-app"
+          media={clips.recycleApp ? 'recycle-app' : null}
           copy={p.recycleApp}
           stack={projectStack.recycleApp}
           actions={[
             { label: p.code, href: links.recycleApp.code, external: true },
-            { label: p.video, href: links.recycleApp.video, external: false },
+            ...(clips.recycleApp
+              ? [{ label: p.video, href: links.recycleApp.video, external: false }]
+              : []),
           ]}
         />
       </div>
