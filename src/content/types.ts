@@ -2,7 +2,7 @@ type Item = { name: string; text: string }
 type Project = { description: string; highlights: string[] }
 
 export type Content = {
-  nav: { skip: string; language: string; stack: string }
+  nav: { skip: string; language: string; stack: string; sections: string; contact: string }
   hero: {
     headline: string
     rows: { frontend: string; backend: string; data: string; base: string }

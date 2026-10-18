@@ -8,10 +8,16 @@
 }
 
 .header__row {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  height: 56px;
+  gap: 16px;
+  height: var(--header-h);
+}
+
+.header__row .snav {
+  justify-self: center;
+  min-width: 0;
 }
 
 .header__mark {
@@ -19,4 +25,22 @@
   letter-spacing: 0.14em;
   color: var(--text-strong);
   text-decoration: none;
+}
+
+/* Narrow screens: the menu takes its own scrollable row under the logo and languages. */
+@media (max-width: 767px) {
+  .header__row {
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 56px auto;
+    row-gap: 0;
+    height: auto;
+  }
+  .header__row .snav {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: stretch;
+    margin: 0 calc(var(--gutter) * -1);
+    padding: 0 var(--gutter);
+    border-top: 1px solid var(--line);
+  }
 }

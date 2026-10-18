@@ -1,5 +1,6 @@
 import { useLang } from '../LangProvider'
 import { LangSwitcher } from './LangSwitcher'
+import { SectionNav } from './SectionNav'
 import './Header.css'
 
 export function Header() {
@@ -14,6 +15,7 @@ export function Header() {
           <a className="header__mark mono" href="#top">
             EO
           </a>
+          <SectionNav />
           <LangSwitcher />
         </div>
       </header>

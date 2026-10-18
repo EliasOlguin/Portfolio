@@ -1,7 +1,13 @@
 import type { Content } from './types'
 
 export const en: Content = {
-  nav: { skip: 'Skip to content', language: 'Language', stack: 'Stack' },
+  nav: {
+    skip: 'Skip to content',
+    language: 'Language',
+    stack: 'Stack',
+    sections: 'Sections',
+    contact: 'Contact',
+  },
   hero: {
     headline:
       'Full-stack developer. React and TypeScript on the front, C#/.NET and SQL behind it, shipped to production.',

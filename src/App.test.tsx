@@ -47,3 +47,16 @@ test('sections appear in the spec order', () => {
     'Let’s build something.',
   ])
 })
+
+test('the header holds the section menu', () => {
+  render(<App />)
+  const banner = screen.getByRole('banner')
+  expect(within(banner).getByRole('navigation', { name: 'Sections' })).toBeInTheDocument()
+})
+
+test('every menu link points at a section that exists', () => {
+  render(<App />)
+  const nav = screen.getByRole('navigation', { name: 'Sections' })
+  for (const link of within(nav).getAllByRole('link'))
+    expect(document.querySelector(link.getAttribute('href')!)).not.toBeNull()
+})

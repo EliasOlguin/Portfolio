@@ -2,7 +2,13 @@ import type { Content } from './types'
 
 // Needs review by a native speaker before launch.
 export const de: Content = {
-  nav: { skip: 'Zum Inhalt springen', language: 'Sprache', stack: 'Technologien' },
+  nav: {
+    skip: 'Zum Inhalt springen',
+    language: 'Sprache',
+    stack: 'Technologien',
+    sections: 'Abschnitte',
+    contact: 'Kontakt',
+  },
   hero: {
     headline:
       'Full-Stack-Entwickler. React und TypeScript im Frontend, C#/.NET und SQL dahinter, im Produktionseinsatz.',

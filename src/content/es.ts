@@ -1,7 +1,13 @@
 import type { Content } from './types'
 
 export const es: Content = {
-  nav: { skip: 'Saltar al contenido', language: 'Idioma', stack: 'Tecnologías' },
+  nav: {
+    skip: 'Saltar al contenido',
+    language: 'Idioma',
+    stack: 'Tecnologías',
+    sections: 'Secciones',
+    contact: 'Contacto',
+  },
   hero: {
     headline:
       'Desarrollador full-stack. React y TypeScript en el front, C#/.NET y SQL detrás, en producción.',

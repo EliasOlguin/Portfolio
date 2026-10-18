@@ -21,4 +21,12 @@
   --page: 1040px;
   --gutter: clamp(16px, 5vw, 48px);
   --radius: 8px;
+  --header-h: 56px;
+}
+
+@media (max-width: 767px) {
+  :root {
+    /* Logo row + menu row. */
+    --header-h: 98px;
+  }
 }
