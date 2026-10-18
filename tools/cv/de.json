@@ -1,0 +1,143 @@
+{
+  "1": ["Full-Stack-Entwickler  ·  C# / .NET Core  ·  React & TypeScript"],
+  "2": [
+    "linkedin.com/in/eliasolguin   |   github.com/EliasOlguin\neliasolguinde@gmail.com",
+    "   |   ",
+    "Köln, Deutschland",
+    "   |   ",
+    " EU-Bürger "
+  ],
+  "4": ["PROFIL"],
+  "5": [
+    "Full-Stack-Entwickler mit 2 Jahren Berufserfahrung in der Entwicklung und Wartung produktionskritischer Anwendungen mit ",
+    "C#, .NET Core, React, Redux, TypeScript und SQL Server",
+    ". Systeme End-to-End geliefert, von Datenbankdesign über REST-APIs und React-Frontends bis zur ",
+    "Modernisierung von Altsystemen",
+    ", für einen Fertigungsbetrieb mit ",
+    "6 Werken",
+    " und Tausenden täglich produzierten Geräten. Aus der Fertigung in die Softwareentwicklung befördert. EU-Bürger (keine Arbeitserlaubnis erforderlich), wohnhaft in Köln und sofort verfügbar."
+  ],
+  "6": ["TECHNISCHE KENNTNISSE"],
+  "7": ["Frontend"],
+  "8": ["React · Redux · TypeScript · JavaScript (ES6+) · Angular · HTML5 · CSS3"],
+  "9": ["Backend"],
+  "10": ["C# · .NET · .NET Core · REST-API-Design"],
+  "11": ["Datenbanken"],
+  "12": ["SQL Server · MySQL · Relationales Schemadesign"],
+  "13": ["Tools & Methoden"],
+  "14": ["Git · SourceTree · Jira · Debugging · Testing · Code-Reviews · Agile Teamarbeit"],
+  "15": ["BERUFSERFAHRUNG"],
+  "16": [
+    "Umzug & italienische (EU-)Staatsbürgerschaft",
+    " – Deutschland und Italien",
+    "\tFeb. 2024 – heute"
+  ],
+  "17": [
+    "Im Mai 2024 von Argentinien nach Deutschland gezogen. Fünf Monate in Italien gelebt, um die italienische Staatsbürgerschaft abzuschließen, danach Rückkehr nach Köln, Übergangstätigkeiten und eigene Entwicklungsprojekte. Inzwischen angekommen und sofort verfügbar."
+  ],
+  "18": ["Newsan S.A.", " – Ushuaia, Argentinien", "\tAug. 2020 – Jan. 2024"],
+  "19": ["Softwareentwickler", "\tApr. 2022 – Jan. 2024"],
+  "20": [
+    "Entwicklung und Wartung von Full-Stack-Anwendungen über ",
+    "Frontend, Backend, REST-APIs und relationale Datenbanken",
+    " hinweg, mit Verantwortung für Features von der Anforderung bis zum Produktionssupport."
+  ],
+  "21": [
+    "Direkte Zusammenarbeit mit Engineering-Teams, Schichtleitung und Linienpersonal, um Anforderungen aufzunehmen, Live-Störungen zu beheben und Lösungen in einer 24/7-Fertigung weiterzuentwickeln."
+  ],
+  "22": [
+    "Durchführung von ",
+    "Tests, Debugging und Produktionssupport",
+    ", mit laufender Anpassung an reale Fertigungsanforderungen."
+  ],
+  "23": [
+    "Aufgabenverwaltung in ",
+    "Jira",
+    " und Versionskontrolle mit ",
+    "Git / SourceTree",
+    "; alle Arbeiten wurden vom technischen Lead geprüft und freigegeben."
+  ],
+  "24": ["Produktionsrückverfolgungssystem"],
+  "25": ["React · Redux · TypeScript · C# · .NET Core · SQL Server"],
+  "26": [
+    "Verantwortlich für Design und Entwicklung von ",
+    "SPP",
+    ", dem Kernmodul zur Konfiguration und Validierung von Produktionsprozessen, täglich genutzt von Schichtleitung, Engineering und Produktionsmanagement in ",
+    "6 Werken",
+    "."
+  ],
+  "27": [
+    "Entwurf von Datenbankschema, Tabellenbeziehungen und Geschäftslogik für Modelle, Seriennummern, Arbeitsplätze und Validierungsregeln."
+  ],
+  "28": [
+    "Entwicklung ",
+    "konfigurierbarer Regex-Validierungsregeln",
+    ", die Bauteilcodes gegen Produktionsvorgaben prüfen und Montagefehler erkennen, bevor ein Gerät weiterläuft."
+  ],
+  "29": [
+    "Mitarbeit an der Ablösung eines langsamen, starren Desktop-Altsystems durch eine flexible Webanwendung, mit besserer Validierung, Konfiguration und Transparenz über alle Produktionslinien."
+  ],
+  "30": [
+    "Einführung des Systems ",
+    "vor Ort in Buenos Aires",
+    ", von Grund auf gemeinsam mit den lokalen Engineering-Teams."
+  ],
+  "31": ["ESD-Schutzausrüstung – Kontrollsystem"],
+  "32": ["React · C# / .NET · SQL Server · Raspberry-Pi-Integration"],
+  "33": [
+    "Entwicklung einer ",
+    "End-to-End-Anwendung",
+    " zur Überwachung des ESD-Schutzes an kritischen Arbeitsplätzen; Geschäftslogik, Datenbankstruktur, Personalverwaltung und Validierungsabläufe von Grund auf entworfen."
+  ],
+  "34": [
+    "Anbindung der Anwendung an einen ",
+    "Raspberry-Pi-Prüfstand",
+    ", Verarbeitung der Good-/No-Good-Ergebnisse von Handgelenkband- und Fersenerdungsprüfungen."
+  ],
+  "35": [
+    "Schichtbasierte Logik, die das Personal jeder Schicht erkennt und dynamisch anzeigt, wer die ESD-Prüfung noch durchführen muss."
+  ],
+  "36": [
+    "Automatische Personalaktualisierung bei Schichtwechsel und ",
+    "tägliche Compliance-Berichte",
+    " für die Schichtleitung."
+  ],
+  "37": [
+    "Enge Zusammenarbeit mit dem Engineering, um die Software mit ",
+    "hardwarebasierten Prüfungen",
+    " zu integrieren und in einer realen Produktionsumgebung einzuführen."
+  ],
+  "38": ["Reparaturtechniker für Mobilgeräte", " – Newsan S.A.", "\tMai 2021 – März 2022"],
+  "39": [
+    "Technische Betreuung einer Produktionslinie; Erkennung und Meldung von Fertigungs- und Gerätefehlern."
+  ],
+  "40": [
+    "Zusammenarbeit mit dem Engineering bei Fehleranalyse und Umsetzung von Lösungen; Anleitung und Betreuung eines Junior-Technikers sowie Koordination der täglichen technischen Aufgaben für einen stabilen Produktionsablauf."
+  ],
+  "41": ["Hartlöter", " – Newsan S.A.", "\tAug. 2020 – Apr. 2021"],
+  "42": [
+    "Hartlöten und Montage von Bauteilen nach täglichen Produktionszielen. ",
+    "Zweimal leistungsbezogen befördert",
+    ": aus der Fertigung zum Techniker und anschließend zum Softwareentwickler."
+  ],
+  "43": ["AUSBILDUNG & WEITERBILDUNG"],
+  "44": ["Diplom Frontend-Entwicklung: Angular & JavaScript", "\tAug. – Dez. 2022"],
+  "45": ["Universidad Nacional de Tierra del Fuego, in Kooperation mit Panalsoft"],
+  "46": ["Full-Stack-Entwicklungsprogramm", "\t2022"],
+  "47": [
+    "UTN Buenos Aires mit DirMOD und der Regierung von Tierra del Fuego · PHP, Laravel, JavaScript, Angular, MySQL"
+  ],
+  "48": ["Diplom Backend-Entwicklung: C# & .NET", "\tAug. – Dez. 2021"],
+  "49": ["Universidad Nacional de Tierra del Fuego, in Kooperation mit Panalsoft"],
+  "50": ["SPRACHEN"],
+  "51": [
+    "Spanisch",
+    ": Muttersprache",
+    "   |   ",
+    "Englisch",
+    ": B2, berufstauglich",
+    "   |   ",
+    "Deutsch",
+    ": A1, Grundkenntnisse"
+  ]
+}

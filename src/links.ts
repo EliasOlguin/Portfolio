@@ -2,7 +2,7 @@ export const links = {
   email: 'mailto:eliasolguinde@gmail.com',
   github: 'https://github.com/EliasOlguin',
   linkedin: 'https://www.linkedin.com/in/eliasolguin/',
-  cv: '/Elias-Olguin-CV.pdf',
+  cv: { en: '/Elias-Olguin-CV.pdf', es: '/Elias-Olguin-CV-ES.pdf', de: '/Elias-Olguin-CV-DE.pdf' },
   doneToday: {
     live: 'https://donetoday-15xl.onrender.com',
     code: 'https://github.com/EliasOlguin/DoneToday',

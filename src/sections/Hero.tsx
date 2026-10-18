@@ -6,7 +6,7 @@ import './Hero.css'
 const svg = contours.replace('<svg ', '<svg aria-hidden="true" focusable="false" ')
 
 export function Hero() {
-  const { t } = useLang()
+  const { lang, t } = useLang()
   const rows = [
     [t.hero.rows.frontend, stack.frontend],
     [t.hero.rows.backend, stack.backend],
@@ -35,7 +35,7 @@ export function Hero() {
           </tbody>
         </table>
         <div className="hero__cta">
-          <a className="btn btn--primary sheen" href={links.cv} download>
+          <a className="btn btn--primary sheen" href={links.cv[lang]} download>
             {t.hero.cta.cv}
           </a>
           <a className="btn sheen" href={links.github} target="_blank" rel="noopener noreferrer">

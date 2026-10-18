@@ -53,3 +53,12 @@ test('the contour drawing is decorative', () => {
   const { container } = renderHero()
   expect(container.querySelector('svg')).toHaveAttribute('aria-hidden', 'true')
 })
+
+test.each([
+  ['es', 'Descargar CV', '/Elias-Olguin-CV-ES.pdf'],
+  ['de', 'Lebenslauf', '/Elias-Olguin-CV-DE.pdf'],
+] as const)('in %s the CV download is the %s version', (lang, name, href) => {
+  vi.spyOn(navigator, 'languages', 'get').mockReturnValue([lang])
+  renderHero()
+  expect(screen.getByRole('link', { name })).toHaveAttribute('href', href)
+})

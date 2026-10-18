@@ -1,0 +1,147 @@
+{
+  "1": ["Desarrollador Full Stack  ·  C# / .NET Core  ·  React & TypeScript"],
+  "2": [
+    "linkedin.com/in/eliasolguin   |   github.com/EliasOlguin\neliasolguinde@gmail.com",
+    "   |   ",
+    "Colonia, Alemania",
+    "   |   ",
+    " Ciudadano UE "
+  ],
+  "4": ["PERFIL"],
+  "5": [
+    "Desarrollador Full Stack con 2 años de experiencia profesional desarrollando y manteniendo aplicaciones críticas para producción con ",
+    "C#, .NET Core, React, Redux, TypeScript y SQL Server",
+    ". He entregado sistemas de punta a punta, abarcando diseño de bases de datos, APIs REST, frontends en React y ",
+    "modernización de sistemas legacy",
+    ", para una operación industrial con ",
+    "6 plantas",
+    " y miles de unidades producidas a diario. Promocionado desde la línea de producción hasta el desarrollo de software. Ciudadano de la UE (sin necesidad de permiso de trabajo), con base en Colonia y disponibilidad inmediata."
+  ],
+  "6": ["COMPETENCIAS TÉCNICAS"],
+  "7": ["Frontend"],
+  "8": ["React · Redux · TypeScript · JavaScript (ES6+) · Angular · HTML5 · CSS3"],
+  "9": ["Backend"],
+  "10": ["C# · .NET · .NET Core · Diseño de APIs REST"],
+  "11": ["Bases de datos"],
+  "12": ["SQL Server · MySQL · Diseño de esquemas relacionales"],
+  "13": ["Herramientas y prácticas"],
+  "14": ["Git · SourceTree · Jira · Debugging · Testing · Code review · Trabajo en equipo ágil"],
+  "15": ["EXPERIENCIA"],
+  "16": [
+    "Reubicación y ciudadanía italiana (UE)",
+    " – Alemania e Italia",
+    "\tFeb. 2024 – Actualidad"
+  ],
+  "17": [
+    "Me trasladé de Argentina a Alemania en mayo de 2024. Residí cinco meses en Italia para completar el trámite de ciudadanía italiana y luego regresé a Colonia, donde trabajé en puestos temporales y desarrollé proyectos personales de programación. Actualmente con disponibilidad inmediata."
+  ],
+  "18": ["Newsan S.A.", " – Ushuaia, Argentina", "\tAgo. 2020 – Ene. 2024"],
+  "19": ["Desarrollador de Software", "\tAbr. 2022 – Ene. 2024"],
+  "20": [
+    "Desarrollo y mantenimiento de aplicaciones full stack abarcando ",
+    "frontend, backend, APIs REST y bases de datos relacionales",
+    ", con responsabilidad sobre cada funcionalidad desde la toma de requisitos hasta el soporte en producción."
+  ],
+  "21": [
+    "Trabajo directo con equipos de ingeniería, supervisores de producción y operarios de línea para relevar requisitos, resolver incidencias en vivo e iterar soluciones en un entorno industrial 24/7."
+  ],
+  "22": [
+    "Realización de ",
+    "testing, debugging y soporte en producción",
+    ", iterando las soluciones en función de requisitos reales de fabricación."
+  ],
+  "23": [
+    "Gestión de tareas en ",
+    "Jira",
+    " y control de versiones con ",
+    "Git / SourceTree",
+    ", sometiendo todo el trabajo a revisión y aprobación del líder técnico."
+  ],
+  "24": ["Sistema de Trazabilidad de Producción"],
+  "25": ["React · Redux · TypeScript · C# · .NET Core · SQL Server"],
+  "26": [
+    "Responsable del diseño y desarrollo de ",
+    "SPP",
+    ", el módulo central para configurar y validar procesos productivos, utilizado a diario por supervisores, ingeniería y gerencia de producción en ",
+    "6 plantas de fabricación",
+    "."
+  ],
+  "27": [
+    "Diseño del esquema de base de datos, relaciones entre tablas y lógica de negocio para modelos, números de serie, puestos de trabajo y reglas de validación."
+  ],
+  "28": [
+    "Desarrollo de ",
+    "reglas de validación configurables basadas en Regex",
+    " que verifican los códigos de componentes contra los requisitos de producción, detectando errores de ensamblaje antes de que las unidades avancen en la línea."
+  ],
+  "29": [
+    "Participación en la sustitución de un sistema de escritorio legacy lento y rígido por una aplicación web flexible, mejorando la validación, la configuración y la visibilidad operativa en todas las líneas de producción."
+  ],
+  "30": [
+    "Despliegue del sistema ",
+    "in situ en Buenos Aires",
+    ", implantándolo desde cero junto a los equipos de ingeniería locales."
+  ],
+  "31": ["Sistema de Control de Equipos de Seguridad ESD"],
+  "32": ["React · C# / .NET · SQL Server · Integración con Raspberry Pi"],
+  "33": [
+    "Desarrollo de una ",
+    "aplicación end-to-end",
+    " para monitorizar el cumplimiento de seguridad frente a descargas electrostáticas (ESD) en puestos críticos, diseñando desde cero la lógica de negocio, la estructura de base de datos, la gestión de personal y los flujos de validación."
+  ],
+  "34": [
+    "Integración de la aplicación con un ",
+    "banco de pruebas con Raspberry Pi",
+    ", procesando los resultados Good / No Good de las pruebas de pulseras antiestáticas y taloneras de descarga."
+  ],
+  "35": [
+    "Implementación de lógica por turnos que identifica al personal de cada turno y muestra dinámicamente quién tiene pendiente la validación ESD."
+  ],
+  "36": [
+    "Automatización de la actualización del personal en cada cambio de turno y generación de ",
+    "informes diarios de cumplimiento",
+    " para los supervisores de producción."
+  ],
+  "37": [
+    "Colaboración estrecha con ingeniería para integrar el software con ",
+    "pruebas basadas en hardware",
+    " y desplegar la solución en un entorno de producción real."
+  ],
+  "38": [
+    "Técnico en Reparación de Dispositivos Móviles",
+    " – Newsan S.A.",
+    "\tMay. 2021 – Mar. 2022"
+  ],
+  "39": [
+    "Gestión de las operaciones técnicas de una línea de producción, identificando y reportando fallos de fabricación y de dispositivo."
+  ],
+  "40": [
+    "Colaboración con ingeniería para diagnosticar problemas de producción e implementar soluciones; supervisión y mentoría de un técnico junior, coordinando las tareas técnicas diarias para asegurar la continuidad de la producción."
+  ],
+  "41": ["Soldador de Brazing", " – Newsan S.A.", "\tAgo. 2020 – Abr. 2021"],
+  "42": [
+    "Soldadura y ensamblaje de componentes según objetivos diarios de producción. ",
+    "Dos promociones por mérito",
+    ": de operario de producción a técnico y, después, a desarrollador de software."
+  ],
+  "43": ["FORMACIÓN"],
+  "44": ["Diplomatura en Desarrollo Frontend: Angular & JavaScript", "\tAgo. – Dic. 2022"],
+  "45": ["Universidad Nacional de Tierra del Fuego, en colaboración con Panalsoft"],
+  "46": ["Programa de Desarrollo Full Stack", "\t2022"],
+  "47": [
+    "UTN Buenos Aires junto a DirMOD y el Gobierno de Tierra del Fuego · PHP, Laravel, JavaScript, Angular, MySQL"
+  ],
+  "48": ["Diplomatura en Desarrollo Backend: C# & .NET", "\tAgo. – Dic. 2021"],
+  "49": ["Universidad Nacional de Tierra del Fuego, en colaboración con Panalsoft"],
+  "50": ["IDIOMAS"],
+  "51": [
+    "Español",
+    ": Nativo",
+    "   |   ",
+    "Inglés",
+    ": B2, nivel profesional",
+    "   |   ",
+    "Alemán",
+    ": A1, básico"
+  ]
+}
