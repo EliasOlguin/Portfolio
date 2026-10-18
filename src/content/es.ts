@@ -53,20 +53,20 @@ export const es: Content = {
       {
         name: 'Sistema de trazabilidad de producción · módulo SPP',
         problem:
-          'Los procesos productivos se configuraban y validaban en un sistema de escritorio heredado, lento y rígido.',
+          'La aplicación de escritorio anterior, hecha en Visual Basic, tenía los modelos y las validaciones escritos en el código: cada cambio de modelo, y cada validación de modelo y número de serie, había que actualizarlos a mano.',
         contribution:
-          'Dentro de un sistema de trazabilidad usado en 6 fábricas, fui responsable de SPP, el módulo central para configurar y validar la producción: esquema de base de datos, lógica de negocio y reglas de validación configurables con regex que verifican los códigos de componentes. También participé en la implantación en planta en Buenos Aires.',
+          'Dentro de un sistema de trazabilidad usado en 6 fábricas, fui responsable de SPP, el módulo central para configurar y validar la producción: esquema de base de datos, lógica de negocio y reglas configurables con regex que verifican los códigos de componentes según un formato combinado (campos como modelo, año, número de serie y planta). También participé en la implantación en planta en Buenos Aires.',
         benefit:
-          'Los errores de ensamblaje se detectan antes de que la unidad avance en la línea, y el paso a una aplicación web mejoró la validación, la configuración y la visibilidad en todas las líneas. Lo usan a diario supervisores, ingeniería y gerencia de producción.',
+          'Los cambios de modelo y las reglas de validación pasaron a ser configuración en lugar de cambios de código, y el proceso se volvió dinámico. Los errores de ensamblaje se detectan antes de que la unidad avance en la línea. Lo usan a diario supervisores, ingeniería y gerencia de producción.',
       },
       {
         name: 'Control de seguridad ESD',
         problem:
-          'Había que controlar el cumplimiento de la seguridad antiestática (ESD) en puestos críticos.',
+          'Los controles de seguridad ESD en puestos críticos se registraban con papel y lápiz.',
         contribution:
           'Desarrollé la aplicación de punta a punta: lógica de negocio, base de datos, gestión de personal y flujos de validación, integrada con un banco de pruebas con Raspberry Pi que informa resultados Good / No Good.',
         benefit:
-          'La lógica por turnos muestra quién tiene pendiente la validación ESD, el personal se actualiza solo en cada cambio de turno y los supervisores reciben un informe diario de cumplimiento.',
+          'Un registro digital riguroso reemplazó al papel: la aplicación detecta automáticamente, en cada turno, quién hizo el control ESD y quién no, actualiza el personal en cada cambio de turno y da a los supervisores un informe diario de cumplimiento.',
       },
     ],
   },
@@ -93,7 +93,7 @@ export const es: Content = {
         'Seguridad de cuenta: 2FA, protección CSRF y confirmación de email.',
         'Lógica de rachas y planificación testeada (xUnit) y versiones publicadas.',
       ],
-      shot: 'Página de inicio de sesión de DoneToday con el lema “Little habits. More you.”',
+      shot: 'Pantalla Hoy de DoneToday: tres hábitos para marcar con su racha actual y la mejor, más el cumplimiento de la semana y el gráfico diario',
     },
     recycleApp: {
       description:

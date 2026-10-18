@@ -54,7 +54,7 @@ test('every card lists its stack', () => {
 test('a project without a recorded clip shows a lazy still with fixed size and alt text', () => {
   renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />)
   for (const [name, src] of [
-    ['DoneToday', '/media/donetoday.webp'],
+    ['DoneToday', '/media/donetoday-en.webp'],
     ['recycle-app', '/media/recycle-app.webp'],
   ]) {
     const img = within(card(name)).getByRole('img')
@@ -94,4 +94,15 @@ test('the live demo warns that free hosting can take a while to wake up', () => 
   expect(
     within(card('DoneToday')).getByText(/first load can take up to a minute/),
   ).toBeInTheDocument()
+})
+
+test.each([
+  ['en', '/media/donetoday-en.webp'],
+  ['es', '/media/donetoday-es.webp'],
+  ['de', '/media/donetoday-en.webp'],
+] as const)('in %s DoneToday shows the Today screen in a matching language', (lang, src) => {
+  renderIn(<Projects clips={{ doneToday: false, recycleApp: false }} />, lang)
+  const img = within(card('DoneToday')).getByRole('img')
+  expect(img).toHaveAttribute('src', src)
+  expect(img.getAttribute('alt')).toMatch(/streak|racha|Streak/)
 })

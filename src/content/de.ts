@@ -54,19 +54,20 @@ export const de: Content = {
       {
         name: 'Produktionsrückverfolgung · SPP-Modul',
         problem:
-          'Produktionsprozesse wurden in einem langsamen, starren Desktop-Altsystem konfiguriert und validiert.',
+          'Die bisherige Desktop-Anwendung in Visual Basic hatte Modelle und Prüfungen fest im Code: Jeder Modellwechsel und jede Prüfung von Modell und Seriennummer musste von Hand angepasst werden.',
         contribution:
-          'Innerhalb eines Rückverfolgungssystems, das in 6 Werken genutzt wird, war ich für SPP verantwortlich, das Kernmodul zur Konfiguration und Validierung der Produktion: Datenbankschema, Geschäftslogik und konfigurierbare Regex-Regeln, die Bauteilcodes prüfen. Außerdem habe ich bei der Einführung vor Ort in Buenos Aires mitgearbeitet.',
+          'Innerhalb eines Rückverfolgungssystems, das in 6 Werken genutzt wird, war ich für SPP verantwortlich, das Kernmodul zur Konfiguration und Validierung der Produktion: Datenbankschema, Geschäftslogik und konfigurierbare Regex-Regeln, die Bauteilcodes gegen ein kombiniertes Format prüfen (Felder wie Modell, Jahr, Seriennummer und Werk). Außerdem habe ich bei der Einführung vor Ort in Buenos Aires mitgearbeitet.',
         benefit:
-          'Montagefehler werden erkannt, bevor ein Gerät weiterläuft, und der Wechsel zu einer Webanwendung hat Validierung, Konfiguration und Transparenz über alle Linien verbessert. Schichtleitung, Engineering und Produktionsmanagement nutzen es täglich.',
+          'Modellwechsel und Prüfregeln wurden zu Konfiguration statt Codeänderungen, der Prozess wurde dadurch flexibel. Montagefehler werden erkannt, bevor ein Gerät weiterläuft. Schichtleitung, Engineering und Produktionsmanagement nutzen es täglich.',
       },
       {
         name: 'ESD-Sicherheitskontrolle',
-        problem: 'Der ESD-Schutz an kritischen Arbeitsplätzen musste überwacht werden.',
+        problem:
+          'ESD-Prüfungen an kritischen Arbeitsplätzen wurden mit Stift und Papier dokumentiert.',
         contribution:
           'Ich habe die Anwendung End-to-End entwickelt: Geschäftslogik, Datenbank, Personalverwaltung und Validierungsabläufe, angebunden an einen Raspberry-Pi-Prüfstand, der Good-/No-Good-Ergebnisse liefert.',
         benefit:
-          'Eine schichtbasierte Logik zeigt, wer die ESD-Prüfung noch durchführen muss, das Personal wird bei Schichtwechsel automatisch aktualisiert, und die Schichtleitung erhält einen täglichen Compliance-Bericht.',
+          'Eine konsequente digitale Erfassung ersetzte das Papierprotokoll: Die Anwendung erkennt pro Schicht automatisch, wer die ESD-Prüfung durchgeführt hat und wer nicht, aktualisiert das Personal bei Schichtwechsel und liefert der Schichtleitung einen täglichen Compliance-Bericht.',
       },
     ],
   },
@@ -93,7 +94,7 @@ export const de: Content = {
         'Kontosicherheit: 2FA, CSRF-Schutz und E-Mail-Bestätigung.',
         'Getestete Streak- und Planungslogik (xUnit) und versionierte Releases.',
       ],
-      shot: 'Anmeldeseite von DoneToday mit dem Slogan „Little habits. More you.“',
+      shot: 'DoneToday-Ansicht Heute: drei Gewohnheiten zum Abhaken mit aktuellem und bestem Streak, dazu die Wochenquote und das Tagesdiagramm (englische Oberfläche)',
     },
     recycleApp: {
       description:

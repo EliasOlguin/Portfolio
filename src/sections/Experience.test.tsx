@@ -57,3 +57,20 @@ test('experience lists the stack chips', () => {
     'Raspberry Pi',
   ])
 })
+
+test('the problems describe what was there before, as Elias reported it', () => {
+  renderIn(<Experience />)
+  const problems = [...document.querySelectorAll('.job__facts dd:first-of-type')].map(
+    (d) => d.textContent ?? '',
+  )
+  expect(problems[0]).toMatch(/Visual Basic/)
+  expect(problems[0]).toMatch(/hard-coded/)
+  expect(problems[1]).toMatch(/paper/)
+})
+
+test('the SPP rules validate a combined code format, not a made-up metric', () => {
+  renderIn(<Experience />)
+  const text = document.body.textContent ?? ''
+  expect(text).toMatch(/model, year, serial number and plant/)
+  expect(text).not.toMatch(/\d+\s?%/)
+})

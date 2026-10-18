@@ -47,20 +47,19 @@ export const en: Content = {
       {
         name: 'Production Traceability System · SPP module',
         problem:
-          'Production processes were configured and validated in a slow, rigid legacy desktop system.',
+          'The previous desktop app, written in Visual Basic, had models and validations hard-coded: every model change, and every model and serial-number check, had to be updated by hand.',
         contribution:
-          'Within a traceability system used in 6 factories, I was responsible for SPP, the core module for configuring and validating production: database schema, business logic and configurable regex rules that check component codes. I also took part in the on-site rollout in Buenos Aires.',
+          'Within a traceability system used in 6 factories, I was responsible for SPP, the core module for configuring and validating production: database schema, business logic and configurable regex rules that check component codes against a combined format (fields such as model, year, serial number and plant). I also took part in the on-site rollout in Buenos Aires.',
         benefit:
-          'Assembly errors are caught before units move down the line, and the move to a web application improved validation, configuration and visibility across production lines. Supervisors, engineering and production management use it daily.',
+          'Model changes and validation rules became configuration instead of code changes, so the process turned dynamic. Assembly errors are caught before units move down the line. Supervisors, engineering and production management use it daily.',
       },
       {
         name: 'ESD Safety Control',
-        problem:
-          'Anti-static (ESD) safety compliance had to be monitored at critical workstations.',
+        problem: 'ESD safety checks at critical workstations were recorded with pen and paper.',
         contribution:
           'I built the application end to end: business logic, database, personnel management and validation flows, integrated with a Raspberry Pi test rig that reports Good / No Good results.',
         benefit:
-          'Shift-aware logic shows who still needs ESD validation, personnel updates automatically at shift change, and supervisors get a daily compliance report.',
+          'A rigorous digital record replaced the paper log: the app detects automatically, for each shift, who has done the ESD check and who has not, updates personnel at shift change and gives supervisors a daily compliance report.',
       },
     ],
   },
@@ -87,7 +86,7 @@ export const en: Content = {
         'Account security: 2FA, CSRF protection and email confirmation.',
         'Tested streak and scheduling logic (xUnit) and versioned releases.',
       ],
-      shot: 'DoneToday sign-in page with the slogan “Little habits. More you.”',
+      shot: 'DoneToday Today screen: three habits to check off with their current and best streak, plus this week’s completion rate and daily chart',
     },
     recycleApp: {
       description:

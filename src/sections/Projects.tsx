@@ -67,14 +67,15 @@ function ProjectCard({ name, media, shot, copy, stack, actions, howItWorks, note
 }
 
 export function Projects({ clips = recordedClips }: { clips?: typeof recordedClips }) {
-  const { t } = useLang()
+  const { lang, t } = useLang()
   const p = t.projects
   return (
     <Section id="projects" label={`02 / ${p.title}`}>
       <div className="projects">
         <ProjectCard
           name="DoneToday"
-          shot="donetoday"
+          // Spanish UI capture for ES; the English one also serves DE until a German capture exists.
+          shot={lang === 'es' ? 'donetoday-es' : 'donetoday-en'}
           media={clips.doneToday ? 'donetoday' : null}
           copy={p.doneToday}
           howItWorks={p.howItWorks}
