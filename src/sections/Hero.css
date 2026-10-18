@@ -1,0 +1,89 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(40px, 8vw, 96px) 0 clamp(56px, 9vw, 112px);
+}
+
+.hero__contours {
+  position: absolute;
+  right: -8%;
+  bottom: -20%;
+  width: min(760px, 95vw);
+  color: var(--contour);
+  pointer-events: none;
+  /* Fade toward the text so lines never sit at full strength behind it. */
+  mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
+}
+
+.hero__contours svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero__body {
+  position: relative;
+}
+
+.hero__tag {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.hero__name {
+  font-size: clamp(44px, 9vw, 88px);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin: clamp(24px, 4vw, 40px) 0 16px;
+}
+
+.hero__headline {
+  max-width: 34ch;
+  font-size: clamp(18px, 2.4vw, 22px);
+  line-height: 1.45;
+  color: var(--text);
+  margin-bottom: 28px;
+}
+
+.hero__spec {
+  width: 100%;
+  max-width: 560px;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+
+.hero__spec th,
+.hero__spec td {
+  text-align: left;
+  padding: 8px 0;
+  border-top: 1px solid var(--line);
+  vertical-align: top;
+}
+
+.hero__spec th {
+  width: 32%;
+  font-weight: 400;
+  color: var(--text-faint);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding-right: 12px;
+}
+
+.hero__spec td {
+  color: var(--text);
+}
+
+.hero__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
