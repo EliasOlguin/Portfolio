@@ -39,6 +39,7 @@ export const es: Content = {
     code: 'Código',
     video: 'Video demo',
     play: 'Reproducir',
+    pause: 'Pausar',
     doneToday: {
       description:
         'Un tracker de hábitos con rachas, estadísticas, 2FA e inicio de sesión con Google, en 3 idiomas.',

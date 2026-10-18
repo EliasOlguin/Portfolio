@@ -40,6 +40,7 @@ export const de: Content = {
     code: 'Code',
     video: 'Demo-Video',
     play: 'Abspielen',
+    pause: 'Pausieren',
     doneToday: {
       description:
         'Ein Habit-Tracker mit Streaks, Statistiken, 2FA und Google-Login, in 3 Sprachen.',

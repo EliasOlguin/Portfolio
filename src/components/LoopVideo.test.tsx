@@ -80,6 +80,25 @@ test('with reduced motion it waits for a click on Play', () => {
   expect(play).toHaveBeenCalledTimes(1)
 })
 
+test('an autoplaying clip can be paused and stays paused while visible (WCAG 2.2.2)', () => {
+  renderVideo()
+  intersect(true)
+  fireEvent.click(screen.getByRole('button', { name: 'Pause' }))
+  expect(pause).toHaveBeenCalledTimes(1)
+  intersect(false)
+  intersect(true)
+  expect(play).toHaveBeenCalledTimes(1)
+  expect(screen.getByRole('button', { name: 'Play' })).toBeInTheDocument()
+})
+
+test('with reduced motion a started clip can be paused again', () => {
+  setReducedMotion(true)
+  renderVideo()
+  fireEvent.click(screen.getByRole('button', { name: 'Play' }))
+  fireEvent.click(screen.getByRole('button', { name: 'Pause' }))
+  expect(pause).toHaveBeenCalledTimes(1)
+})
+
 test('a rejected autoplay keeps the poster and does not throw', async () => {
   play.mockImplementationOnce(() => Promise.reject(new Error('NotAllowedError')))
   renderVideo()

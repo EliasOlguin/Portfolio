@@ -17,6 +17,7 @@ export type Content = {
     code: string
     video: string
     play: string
+    pause: string
     doneToday: Project
     recycleApp: Project
   }
