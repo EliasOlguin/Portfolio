@@ -21,6 +21,7 @@ export function Contact() {
             {t.hero.cta.github}
           </a>
         </div>
+        <p className="contact__address mono">{links.email.replace('mailto:', '')}</p>
       </div>
     </section>
   )

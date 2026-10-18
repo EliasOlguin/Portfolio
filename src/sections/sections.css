@@ -224,3 +224,10 @@
 .footer__mate svg {
   display: block;
 }
+
+.contact__address {
+  margin-top: 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+  user-select: all;
+}
