@@ -7,16 +7,26 @@ import { links, projectStack, recordedClips } from '../links'
 type CardProps = {
   name: string
   media: string | null
-  copy: { description: string; highlights: string[] }
+  shot: string
+  copy: { description: string; highlights: string[]; shot: string }
   stack: readonly string[]
   actions: { label: string; href: string; external: boolean }[]
 }
 
-function ProjectCard({ name, media, copy, stack, actions }: CardProps) {
+function ProjectCard({ name, media, shot, copy, stack, actions }: CardProps) {
   return (
     <article className="project sheen">
-      {media && (
+      {media ? (
         <LoopVideo src={`/media/${media}.mp4`} poster={`/media/${media}.jpg`} label={name} />
+      ) : (
+        <img
+          className="project__shot"
+          src={`/media/${shot}.webp`}
+          alt={copy.shot}
+          width={960}
+          height={600}
+          loading="lazy"
+        />
       )}
       <div className="project__body">
         <h3>{name}</h3>
@@ -51,6 +61,7 @@ export function Projects({ clips = recordedClips }: { clips?: typeof recordedCli
       <div className="projects">
         <ProjectCard
           name="DoneToday"
+          shot="donetoday"
           media={clips.doneToday ? 'donetoday' : null}
           copy={p.doneToday}
           stack={projectStack.doneToday}
@@ -61,6 +72,7 @@ export function Projects({ clips = recordedClips }: { clips?: typeof recordedCli
         />
         <ProjectCard
           name="recycle-app"
+          shot="recycle-app"
           media={clips.recycleApp ? 'recycle-app' : null}
           copy={p.recycleApp}
           stack={projectStack.recycleApp}

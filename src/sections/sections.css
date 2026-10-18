@@ -99,6 +99,15 @@
   border-color: var(--line-strong);
 }
 
+.project__shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+
 .project__body {
   padding: 24px;
 }

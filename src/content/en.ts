@@ -54,6 +54,7 @@ export const en: Content = {
         'Account security: 2FA, CSRF protection and email confirmation.',
         'Tested streak and scheduling logic (xUnit) and versioned releases.',
       ],
+      shot: 'DoneToday sign-in page with the slogan “Little habits. More you.”',
     },
     recycleApp: {
       description:
@@ -63,6 +64,7 @@ export const en: Content = {
         'City-specific sorting rules on top of the model’s answer.',
         'Anonymous feedback to correct wrong answers.',
       ],
+      shot: 'Two recycle-app screens: a cookie box split into the blue paper bin and the yellow packaging bin, and a question about the colour of a glass jar',
     },
   },
   path: {

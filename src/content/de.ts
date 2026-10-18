@@ -55,6 +55,7 @@ export const de: Content = {
         'Kontosicherheit: 2FA, CSRF-Schutz und E-Mail-Bestätigung.',
         'Getestete Streak- und Planungslogik (xUnit) und versionierte Releases.',
       ],
+      shot: 'Anmeldeseite von DoneToday mit dem Slogan „Little habits. More you.“',
     },
     recycleApp: {
       description:
@@ -64,6 +65,7 @@ export const de: Content = {
         'Stadtspezifische Trennregeln über der Antwort des Modells.',
         'Anonymes Feedback, um falsche Antworten zu korrigieren.',
       ],
+      shot: 'Zwei Screens von recycle-app: eine Keksschachtel, aufgeteilt in die blaue Papiertonne und die gelbe Wertstofftonne, und eine Frage nach der Farbe eines Glases',
     },
   },
   path: {
