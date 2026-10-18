@@ -74,7 +74,7 @@ Privacy: **no phone number** anywhere on the site or in the downloadable CV. Con
 
 ## Deploy
 
-Vercel (free tier) from the GitHub repo, URL `*.vercel.app`. Custom domain later.
+Vercel (free tier) from the GitHub repo. Custom domain www.eliasolguin.dev (registered at Cloudflare, DNS only; the bare domain redirects to www).
 
 ## Out of scope (for now)
 
