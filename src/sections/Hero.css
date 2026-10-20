@@ -43,6 +43,70 @@
   letter-spacing: -0.03em;
   line-height: 1;
   margin: clamp(16px, 2.5vw, 28px) 0 14px;
+  /* As wide as the name, so the glint sweeps the letters and not empty space. */
+  width: fit-content;
+}
+
+/* Metallic glint over the chrome name: once on load, again on hover (like the cards).
+   The dark edges around the light band give it contrast on the already bright chrome. */
+.hero__name.chrome {
+  background-image:
+    linear-gradient(
+      105deg,
+      transparent 44%,
+      rgb(30 33 38 / 0.75) 47.5%,
+      rgb(255 255 255) 50%,
+      rgb(30 33 38 / 0.75) 52.5%,
+      transparent 56%
+    ),
+    var(--chrome);
+  background-size:
+    250% 100%,
+    100% 100%;
+  background-repeat: no-repeat;
+  /* 100% keeps the light band just left of the text; 0% just right of it. */
+  background-position:
+    100% 0,
+    0 0;
+  animation: name-sheen 1.6s ease 0.4s 1 both;
+}
+
+.hero__name.chrome:hover {
+  animation: name-sheen-again 1.2s ease;
+}
+
+@keyframes name-sheen {
+  from {
+    background-position:
+      100% 0,
+      0 0;
+  }
+  to {
+    background-position:
+      0 0,
+      0 0;
+  }
+}
+
+/* Same sweep under another name, so hovering restarts it. */
+@keyframes name-sheen-again {
+  from {
+    background-position:
+      100% 0,
+      0 0;
+  }
+  to {
+    background-position:
+      0 0,
+      0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__name.chrome,
+  .hero__name.chrome:hover {
+    animation: none;
+  }
 }
 
 .hero__headline {
