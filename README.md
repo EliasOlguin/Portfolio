@@ -104,3 +104,21 @@ The QA scripts expect `npx vite preview --port 4180` to be running.
 
 - [DoneToday](https://github.com/EliasOlguin/DoneToday): habit tracker, ASP.NET Core + React ([live demo](https://donetoday-15xl.onrender.com))
 - [recycle-app](https://github.com/EliasOlguin/recycle-app): which bin does this go in, Expo + Fastify + vision model
+
+## License
+
+The **source code** is released under the [MIT License](LICENSE).
+
+The **personal content** is not covered by that license: © Elias Olguin, all rights reserved. That means:
+
+- the CVs (`public/Elias-Olguin-CV*.pdf`), including the photo they contain;
+- the texts in `src/content/`;
+- the screenshots and slides in `public/media/`;
+- the preview image `public/og.png`.
+
+Please do not reuse them without permission.
+
+Third-party material keeps its own license:
+
+- **Fonts:** Geist and Geist Mono, SIL Open Font License, via `@fontsource-variable`.
+- **Elevation data:** the contours in `src/assets/ushuaia-contours.svg` are derived from [Terrain Tiles](https://registry.opendata.aws/terrain-tiles/) on AWS Open Data, which combine public datasets such as SRTM.
