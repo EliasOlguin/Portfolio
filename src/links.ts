@@ -4,7 +4,7 @@ export const links = {
   linkedin: 'https://www.linkedin.com/in/eliasolguin/',
   cv: { en: '/Elias-Olguin-CV.pdf', es: '/Elias-Olguin-CV-ES.pdf', de: '/Elias-Olguin-CV-DE.pdf' },
   doneToday: {
-    live: 'https://donetoday-15xl.onrender.com',
+    live: 'https://donetoday.eliasolguin.dev',
     code: 'https://github.com/EliasOlguin/DoneToday',
   },
   recycleApp: {

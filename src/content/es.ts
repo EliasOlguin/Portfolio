@@ -83,7 +83,6 @@ export const es: Content = {
     screenshots: 'Capturas',
     prev: 'Anterior',
     next: 'Siguiente',
-    liveNote: 'Hosting gratuito: la primera carga puede tardar hasta un minuto.',
     doneToday: {
       description:
         'Una app de seguimiento de hábitos: programas tus hábitos, los marcas cada día y sigues tus rachas. En español, inglés y alemán.',

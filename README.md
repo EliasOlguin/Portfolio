@@ -102,7 +102,7 @@ The QA scripts expect `npx vite preview --port 4180` to be running.
 
 ## Related
 
-- [DoneToday](https://github.com/EliasOlguin/DoneToday): habit tracker, ASP.NET Core + React ([live demo](https://donetoday-15xl.onrender.com))
+- [DoneToday](https://github.com/EliasOlguin/DoneToday): habit tracker, ASP.NET Core + React ([live demo](https://donetoday.eliasolguin.dev))
 - [recycle-app](https://github.com/EliasOlguin/recycle-app): which bin does this go in, Expo + Fastify + vision model
 
 ## License

@@ -26,7 +26,7 @@ test('DoneToday links to the live app and the code in a new tab', () => {
   renderIn(<Projects />)
   const c = within(card('DoneToday'))
   for (const [name, href] of [
-    ['Live', 'https://donetoday-15xl.onrender.com'],
+    ['Live', 'https://donetoday.eliasolguin.dev'],
     ['Code', 'https://github.com/EliasOlguin/DoneToday'],
   ]) {
     const link = c.getByRole('link', { name })
@@ -112,13 +112,6 @@ test('each card shows a verified start date and status', () => {
   expect(within(card('DoneToday')).getByText('Since Oct 2026 · v1.2.2 · live')).toBeInTheDocument()
   expect(
     within(card('recycle-app')).getByText('Since Oct 2026 · in development'),
-  ).toBeInTheDocument()
-})
-
-test('the live demo warns that free hosting can take a while to wake up', () => {
-  renderIn(<Projects />)
-  expect(
-    within(card('DoneToday')).getByText(/first load can take up to a minute/),
   ).toBeInTheDocument()
 })
 

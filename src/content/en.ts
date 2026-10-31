@@ -76,7 +76,6 @@ export const en: Content = {
     screenshots: 'Screenshots',
     prev: 'Previous',
     next: 'Next',
-    liveNote: 'Free hosting: the first load can take up to a minute.',
     doneToday: {
       description:
         'A habit tracker: schedule habits, check them off each day and follow your streaks. In English, Spanish and German.',

@@ -38,7 +38,6 @@ export type Content = {
     screenshots: string
     prev: string
     next: string
-    liveNote: string
     doneToday: Project & { gallery: string[] }
     recycleApp: Project
   }

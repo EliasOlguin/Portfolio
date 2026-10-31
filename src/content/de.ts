@@ -84,7 +84,6 @@ export const de: Content = {
     screenshots: 'Screenshots',
     prev: 'Zurück',
     next: 'Weiter',
-    liveNote: 'Kostenloses Hosting: Der erste Aufruf kann bis zu einer Minute dauern.',
     doneToday: {
       description:
         'Ein Habit-Tracker: Gewohnheiten planen, täglich abhaken und Streaks verfolgen. Auf Deutsch, Englisch und Spanisch.',

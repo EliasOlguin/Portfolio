@@ -12,7 +12,6 @@ type CardProps = {
   slides: Slide[]
   copy: { description: string; meta: string; steps: string[]; highlights: string[]; shot: string }
   howItWorks: string
-  note?: string
   stack: readonly string[]
   actions: { label: string; href: string; external: boolean }[]
 }
@@ -26,7 +25,6 @@ function ProjectCard({
   stack,
   actions,
   howItWorks,
-  note,
 }: CardProps) {
   return (
     <article className="project sheen">
@@ -64,7 +62,6 @@ function ProjectCard({
             </a>
           ))}
         </p>
-        {note && <p className="project__note">{note}</p>}
       </div>
     </article>
   )
@@ -87,7 +84,6 @@ export function Projects({ clips = recordedClips }: { clips?: typeof recordedCli
           media={clips.doneToday ? 'donetoday' : null}
           copy={p.doneToday}
           howItWorks={p.howItWorks}
-          note={p.liveNote}
           stack={projectStack.doneToday}
           actions={[
             { label: p.live, href: links.doneToday.live, external: true },
